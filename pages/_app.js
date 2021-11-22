@@ -1,6 +1,6 @@
 import { getMiddlewareManifest } from 'next/dist/client/route-loader';
 import { createGlobalStyle, ThemeProvider } from 'styled-components';
-import Layout from '../components/Layout';
+import Layout from '../components/Layout.tsx';
 
 const GlobalStyle = createGlobalStyle`
   body {

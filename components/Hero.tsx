@@ -7,11 +7,10 @@ const Header = styled.h1`
   background-color: green;
 `;
 
-export default function Welcome({ children }) {
+export default function Welcome() {
   return (
     <div>
       <Header>Key To Health</Header>
-      {children}
     </div>
   );
 }
