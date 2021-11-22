@@ -9,10 +9,10 @@ const Title = styled.h1`
   color: ${({ theme }) => theme.colors.primary};
 `;
 
-export default function Home() {
+export default function About() {
   return (
     <>
-      <Title>first page</Title>
+      <Title>About page</Title>
     </>
   );
 }

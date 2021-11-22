@@ -1,4 +1,4 @@
-import React from 'react';
+import Nav from './Nav';
 import styled from 'styled-components';
 
 const ContainerHeader = styled.div`
@@ -6,5 +6,10 @@ const ContainerHeader = styled.div`
 `;
 
 export default function Header() {
-  return <ContainerHeader>Header</ContainerHeader>;
+  return (
+    <ContainerHeader>
+      Header
+      <Nav />
+    </ContainerHeader>
+  );
 }
