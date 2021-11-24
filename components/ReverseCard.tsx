@@ -8,7 +8,7 @@ const CardWrapper = styled.div`
   width: 100%;
   display: flex;
   justify-content: center;
-  background-color: ${({ theme }) => theme.colors.cream};
+  background-color: ${({ theme }) => theme.colors.lcream};
   display: flex;
   align-items: center;
   justify-content: center;
@@ -25,7 +25,7 @@ const HeaderBorder = styled.div`
   width: 100%;
   display: flex;
   align-items: center;
-  justify-content: flex-start;
+  justify-content: flex-end;
 `;
 
 const CardHeader = styled.h2`
@@ -54,7 +54,7 @@ const Goods = styled.div`
   width: 40%;
   height: 70vh;
   margin-bottom: 40px;
-  margin-left: 20px;
+  margin-right: 20px;
 `;
 
 const CardText = styled.p`
@@ -66,13 +66,13 @@ export default function Card({ title, id, image }) {
     <CardWrapper id={id}>
       <Border>
         <MeatBorder>
-          <Image src={image}></Image>
           <Goods>
             <HeaderBorder>
               <CardHeader>{title}</CardHeader>
             </HeaderBorder>
             <CardText></CardText>
           </Goods>
+          <Image src={image}></Image>
         </MeatBorder>
       </Border>
     </CardWrapper>
