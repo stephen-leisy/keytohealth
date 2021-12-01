@@ -19,12 +19,12 @@ const Page = styled.main`
   padding: 0;
 `;
 
-const Layout: React.FunctionComponent = ({ children }) => {
-  const [currentScroll, setCurrentScroll] = useState(0);
-  const [top, setTop] = useState(false);
+const Layout: React.FunctionComponent<{ children: any }> = ({ children }) => {
+  const [currentScroll, setCurrentScroll] = React.useState(0);
+  const [top, setTop] = React.useState(false);
   const scrollY = useScrollPosition(30 /*frames per second*/);
 
-  const scrollHeader = () => {
+  const scrollHeader = (scrollY) => {
     if (scrollY > 20) {
       setTop(true);
     } else {
@@ -33,7 +33,7 @@ const Layout: React.FunctionComponent = ({ children }) => {
   };
 
   useEffect(() => {
-    scrollHeader();
+    scrollHeader(scrollY);
   }, [scrollY]);
 
   return (

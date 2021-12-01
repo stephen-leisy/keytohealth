@@ -5,13 +5,13 @@ import styled from 'styled-components';
 const ContainerHeader = styled.div`
   /* position: ${({ tipTop }) => (tipTop ? 'fixed' : 'absolute')}; */
   position: fixed;
-  margin-top: ${({ tipTop }) => (tipTop ? '0px' : '80px')};
-  height: ${({ tipTop }) => (tipTop ? '8vh' : '12vh')};
+  margin-top: ${({ top }) => (top ? '0px' : '80px')};
+  height: ${({ top }) => (top ? '8vh' : '12vh')};
   width: 100%;
   /* background-color: ${({ theme }) => theme.colors.cream}; */
   /* background: rgba(255, 209, 173, 0.7); */
-  background: ${({ tipTop, theme }) =>
-    tipTop ? theme.colors.cream : 'rgba(255, 209, 173, 0.5)'};
+  background: ${({ top, theme }) =>
+    top ? theme.colors.cream : 'rgba(255, 209, 173, 0.5)'};
   transition: 0.3s ease-in-out;
   border-bottom: 5px solid black;
   border-top: 5px solid black;
@@ -25,7 +25,7 @@ const ContainerHeader = styled.div`
   z-index: 10;
 
   @media screen and (max-width: 414px) {
-    height: ${({ tipTop }) => (tipTop ? '12vh' : '16vh')};
+    height: ${({ top }) => (top ? '12vh' : '16vh')};
   }
 
   /* &.sticky {
@@ -72,13 +72,13 @@ const MobileIcon = styled.div`
   }
 
   @media screen and (max-width: 414px) {
-    padding-top: ${({ tipTop }) => (tipTop ? '-5px' : '5px')};
+    padding-top: ${({ top }) => (top ? '-5px' : '5px')};
   }
 `;
 
-export default function Header({ top }) {
+const Header = ({ top }) => {
   return (
-    <ContainerHeader tipTop={top}>
+    <ContainerHeader top={top}>
       <Logo>Key To Health</Logo>
       <MobileIcon>
         <FaBars />
@@ -86,4 +86,8 @@ export default function Header({ top }) {
       <Nav />
     </ContainerHeader>
   );
-}
+};
+
+export default Header;
+
+// : React.FunctionComponent<{ top: boolean }>
