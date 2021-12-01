@@ -28,7 +28,7 @@ const BackImage = styled.div`
     background-position: 60% 50%;
     background-attachment: scroll;
     width: 100vh;
-    height: 140vh;
+    height: 180vh;
   }
 `;
 
@@ -43,6 +43,10 @@ const CardPlaceing = styled.div`
   @media screen and (max-width: 1200px) {
     width: 100%;
   }
+
+  @media screen and (max-width: 414px) {
+    align-items: flex-end;
+  }
 `;
 
 const WelcomeCard = styled.div`
@@ -55,6 +59,11 @@ const WelcomeCard = styled.div`
   align-items: center;
   flex-direction: column;
   border: black 1px solid;
+
+  @media screen and (max-width: 414px) {
+    width: 100vh;
+    height: 80vh;
+  }
 `;
 
 const Header = styled.h2`

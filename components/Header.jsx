@@ -25,7 +25,7 @@ const ContainerHeader = styled.div`
   z-index: 10;
 
   @media screen and (max-width: 414px) {
-    height: ${({ top }) => (top ? '12vh' : '16vh')};
+    height: ${({ top }) => (top ? '20vh' : '24vh')};
   }
 
   /* &.sticky {
@@ -62,6 +62,7 @@ const MobileIcon = styled.div`
   @media screen and (max-width: 1200px) {
     display: block;
     position: absolute;
+
     top: 0;
     right: 0;
     transform: translate(-100%, 60%);
@@ -72,7 +73,7 @@ const MobileIcon = styled.div`
   }
 
   @media screen and (max-width: 414px) {
-    padding-top: ${({ top }) => (top ? '-5px' : '5px')};
+    padding-top: 15px;
   }
 `;
 
