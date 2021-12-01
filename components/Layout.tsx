@@ -1,11 +1,15 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
+import useScrollPosition from '@react-hook/window-scroll';
 import HeadInfo from './HeadInfo';
 import Header from './Header';
+import dynamic from 'next/dynamic';
 import Welcome from './Hero';
 import Footer from './Footer';
-import Card from './Card';
+// import Card from './Card';
 import ReverseCard from './ReverseCard';
 import styled from 'styled-components';
+
+const Card = dynamic(() => import('./Card'));
 
 const Page = styled.main`
   height: 100%;
@@ -16,10 +20,26 @@ const Page = styled.main`
 `;
 
 const Layout: React.FunctionComponent = ({ children }) => {
+  const [currentScroll, setCurrentScroll] = useState(0);
+  const [top, setTop] = useState(false);
+  const scrollY = useScrollPosition(30 /*frames per second*/);
+
+  const scrollHeader = () => {
+    if (scrollY > 20) {
+      setTop(true);
+    } else {
+      setTop(false);
+    }
+  };
+
+  useEffect(() => {
+    scrollHeader();
+  }, [scrollY]);
+
   return (
     <Page>
       <HeadInfo />
-      <Header />
+      <Header top={top} />
       <Welcome />
       {children}
 

@@ -3,12 +3,16 @@ import { FaBars } from 'react-icons/fa';
 import styled from 'styled-components';
 
 const ContainerHeader = styled.div`
+  /* position: ${({ tipTop }) => (tipTop ? 'fixed' : 'absolute')}; */
   position: fixed;
-  margin-top: 40px;
-  height: 10vh;
+  margin-top: ${({ tipTop }) => (tipTop ? '0px' : '80px')};
+  height: ${({ tipTop }) => (tipTop ? '8vh' : '12vh')};
   width: 100%;
   /* background-color: ${({ theme }) => theme.colors.cream}; */
-  background: rgba(255, 209, 173, 0.7);
+  /* background: rgba(255, 209, 173, 0.7); */
+  background: ${({ tipTop, theme }) =>
+    tipTop ? theme.colors.cream : 'rgba(255, 209, 173, 0.5)'};
+  transition: 0.3s ease-in-out;
   border-bottom: 5px solid black;
   border-top: 5px solid black;
   padding-bottom: 0;
@@ -19,6 +23,18 @@ const ContainerHeader = styled.div`
   justify-content: space-between;
   /* flex-direction: row; */
   z-index: 10;
+
+  /* &.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+  } */
+
+  /* @supports (position: sticky) {
+    position: fixed;
+    top: 0;
+    width: 100%;
+  } */
 `;
 
 const Border = styled.div`
@@ -32,14 +48,14 @@ const Border = styled.div`
 const Logo = styled.h2`
   font-family: 'Abril Fatface', cursive;
   color: ${({ theme }) => theme.colors.green};
-  font-size: 3rem;
+  font-size: 2.8rem;
   margin-left: 4%;
 `;
 
 const MobileIcon = styled.div`
   display: none;
 
-  @media screen and (max-width: 1300px) {
+  @media screen and (max-width: 1200px) {
     display: block;
     position: absolute;
     top: 0;
@@ -52,9 +68,9 @@ const MobileIcon = styled.div`
   }
 `;
 
-export default function Header() {
+export default function Header({ top }) {
   return (
-    <ContainerHeader>
+    <ContainerHeader tipTop={top}>
       <Logo>Key To Health</Logo>
       <MobileIcon>
         <FaBars />

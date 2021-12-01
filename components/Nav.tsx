@@ -9,7 +9,7 @@ const RouterWrapper = styled.div`
   justify-content: flex-end;
   margin-right: 4%;
 
-  @media screen and (max-width: 1300px) {
+  @media screen and (max-width: 1200px) {
     display: none;
   }
 `;

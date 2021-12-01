@@ -28,9 +28,14 @@ const BackImage = styled.div`
 const CardPlaceing = styled.div`
   width: 80%;
   height: 100%;
+  padding-top: 15vh;
   display: flex;
   justify-content: center;
   align-items: center;
+
+  @media screen and (max-width: 1200px) {
+    width: 100%;
+  }
 `;
 
 const WelcomeCard = styled.div`
@@ -47,7 +52,7 @@ const WelcomeCard = styled.div`
 
 const Header = styled.h2`
   width: 90%;
-  font-size: 2.6rem;
+  font-size: 2rem;
   font-family: 'Abril Fatface', cursive;
   color: ${({ theme }) => theme.colors.green};
   margin: 0;
@@ -57,11 +62,11 @@ const Header = styled.h2`
 
 const About = styled.p`
   width: 80%;
-  font-size: 1.8rem;
+  font-size: 1.6rem;
   margin: 0;
-
   display: flex;
   justify-content: center;
+  text-align: center;
 `;
 
 const ContactButton = styled.button`
@@ -69,7 +74,8 @@ const ContactButton = styled.button`
   width: 160px;
   margin-top: 20px;
   font-family: 'Abril Fatface', cursive;
-  font-size: 1.4rem;
+  font-size: 1rem;
+
   color: ${({ theme }) => theme.colors.green};
 
   background-color: ${({ theme }) => theme.colors.cream};
