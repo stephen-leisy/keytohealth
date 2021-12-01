@@ -26,7 +26,7 @@ const RouterLink = styled.li`
   text-decoration: none;
   /* justify-content: flex-start; */
   color: ${({ theme }) => theme.colors.brown};
-  font-size: 2.2rem;
+  font-size: 2rem;
   font-family: 'Abril Fatface', cursive;
 `;
 
