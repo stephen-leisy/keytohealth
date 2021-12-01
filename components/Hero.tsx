@@ -4,7 +4,7 @@ import FadeIn from 'react-fade-in';
 
 const Wrapper = styled.main`
   height: 100%;
-  width: 100%;
+  width: 100vw;
   padding: 0;
   margin: 0;
 
@@ -13,7 +13,7 @@ const Wrapper = styled.main`
 
 const BackImage = styled.div`
   height: 100vh;
-  width: 100%;
+  width: 100vw;
   display: block;
   background-image: url(${'https://www.patriciagreencellars.com/assets/client/Image/AndersonFamily/AndersonFamilyVineyard.png'});
   -webkit-background-size: cover;
@@ -23,6 +23,13 @@ const BackImage = styled.div`
   background-attachment: fixed;
   /* position: absolute; */
   z-index: 1;
+
+  @media screen and (max-width: 414px) {
+    background-position: 60% 50%;
+    background-attachment: scroll;
+    width: 100vh;
+    height: 140vh;
+  }
 `;
 
 const CardPlaceing = styled.div`

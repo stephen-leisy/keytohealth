@@ -24,6 +24,10 @@ const ContainerHeader = styled.div`
   /* flex-direction: row; */
   z-index: 10;
 
+  @media screen and (max-width: 414px) {
+    height: ${({ tipTop }) => (tipTop ? '12vh' : '16vh')};
+  }
+
   /* &.sticky {
     position: fixed;
     top: 0;
@@ -65,6 +69,10 @@ const MobileIcon = styled.div`
     cursor: pointer;
 
     background: transparent;
+  }
+
+  @media screen and (max-width: 414px) {
+    padding-top: ${({ tipTop }) => (tipTop ? '-5px' : '5px')};
   }
 `;
 

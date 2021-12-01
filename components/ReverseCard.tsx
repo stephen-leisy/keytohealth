@@ -12,6 +12,11 @@ const CardWrapper = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+
+  @media screen and (max-width: 414px) {
+    width: 100vh;
+    height: 140vh;
+  }
 `;
 
 const Border = styled.div`

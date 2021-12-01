@@ -7,6 +7,11 @@ const FooterWrapper = styled.div`
   width: 100%;
   display: flex;
   justify-content: center;
+
+  @media screen and (max-width: 414px) {
+    width: 100vh;
+    height: 140vh;
+  }
 `;
 
 const FooterHeader = styled.h2`
