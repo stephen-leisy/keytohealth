@@ -62,7 +62,7 @@ const MobileIcon = styled.div`
   @media screen and (max-width: 1200px) {
     display: block;
     position: absolute;
-
+    color: ${({ theme }) => theme.colors.green};
     top: 0;
     right: 0;
     transform: translate(-100%, 60%);
@@ -77,11 +77,11 @@ const MobileIcon = styled.div`
   }
 `;
 
-const Header = ({ top }) => {
+const Header = ({ top, toggle }) => {
   return (
     <ContainerHeader top={top}>
       <Logo>Key To Health</Logo>
-      <MobileIcon>
+      <MobileIcon onClick={toggle}>
         <FaBars />
       </MobileIcon>
       <Nav />

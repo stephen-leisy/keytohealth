@@ -8,6 +8,7 @@ import Footer from './Footer';
 // import Card from './Card';
 import ReverseCard from './ReverseCard';
 import styled from 'styled-components';
+import Sidebar from './Sidebar';
 
 const Card = dynamic(() => import('./Card'));
 
@@ -22,6 +23,7 @@ const Page = styled.main`
 const Layout: React.FunctionComponent<{ children: any }> = ({ children }) => {
   const [currentScroll, setCurrentScroll] = React.useState(0);
   const [top, setTop] = React.useState(false);
+  const [isOpen, setIsOpen] = useState(false);
   const scrollY = useScrollPosition(30 /*frames per second*/);
 
   const scrollHeader = (scrollY) => {
@@ -32,6 +34,10 @@ const Layout: React.FunctionComponent<{ children: any }> = ({ children }) => {
     }
   };
 
+  const toggle = () => {
+    setIsOpen(!isOpen);
+  };
+
   useEffect(() => {
     scrollHeader(scrollY);
   }, [scrollY]);
@@ -39,8 +45,9 @@ const Layout: React.FunctionComponent<{ children: any }> = ({ children }) => {
   return (
     <Page>
       <HeadInfo />
-      <Header top={top} />
+      <Header top={top} toggle={toggle} />
       <Welcome />
+      <Sidebar isOpen={isOpen} toggle={toggle} />
       {children}
 
       <Card
