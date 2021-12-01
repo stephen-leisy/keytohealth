@@ -28,7 +28,7 @@ const BackImage = styled.div`
     background-position: 60% 50%;
     background-attachment: scroll;
     width: 100vh;
-    height: 180vh;
+    height: 160vh;
   }
 `;
 
