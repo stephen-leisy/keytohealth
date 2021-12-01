@@ -62,7 +62,7 @@ const WelcomeCard = styled.div`
 
   @media screen and (max-width: 414px) {
     width: 100vh;
-    height: 80vh;
+    height: 90vh;
   }
 `;
 
