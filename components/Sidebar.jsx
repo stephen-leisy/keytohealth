@@ -1,9 +1,10 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
+import { Link as ScrollLink } from 'react-scroll';
+import Link from 'next/link';
 import styled from 'styled-components';
 import { FaTimes } from 'react-icons/fa';
-import { Link as ScrollLink } from 'react-scroll';
 
-export const SidebarLimits = styled.main`
+const SidebarLimits = styled.main`
   position: fixed;
   z-index: 999;
   width: 100%;
@@ -19,7 +20,7 @@ export const SidebarLimits = styled.main`
   overflow-x: visible;
 `;
 
-export const Icon = styled.div`
+const Icon = styled.div`
   position: absolute;
   top: 1.2rem;
   right: 1.5rem;
@@ -29,17 +30,17 @@ export const Icon = styled.div`
   outline: none;
 `;
 
-export const CloseIcon = styled(FaTimes)`
+const CloseIcon = styled(FaTimes)`
   background: transparent;
   font-size: 3rem;
   color: ${({ theme }) => theme.colors.green};
 `;
 
-export const SidebarWrapper = styled.div`
+const SidebarWrapper = styled.div`
   background-color: #f8f0e3;
 `;
 
-export const SidebarMenu = styled.ul`
+const SidebarMenu = styled.ul`
   background-color: #f8f0e3;
   display: grid;
   grid-template-columns: 1fr;
@@ -51,7 +52,7 @@ export const SidebarMenu = styled.ul`
   }
 `;
 
-export const SidebarLink = styled(ScrollLink)`
+const SidebarLink = styled(ScrollLink)`
   display: flex;
   align-items: center;
   justify-content: center;
@@ -77,7 +78,7 @@ export const SidebarLink = styled(ScrollLink)`
   }
 `;
 
-export const SocialLink = styled.button`
+const SocialLink = styled.button`
   color: #cf7968;
   font-size: 1.8rem;
   font-style: bold;
@@ -90,7 +91,45 @@ export const SocialLink = styled.button`
   }
 `;
 
+const NextLink = styled(Link)``;
+
 export default function Sidebar({ isOpen, toggle }) {
+  const [url, setUrl] = useState('');
+  useEffect(() => {
+    setUrl(document.URL);
+  }, []);
+
+  let site = url.split('/')[3];
+  if (!site) {
+    return (
+      <>
+        <SidebarLimits isOpen={isOpen} onClick={toggle}>
+          <Icon onCLick={toggle}>
+            <CloseIcon />
+          </Icon>
+          <SidebarWrapper>
+            <SidebarMenu>
+              <SidebarLink to="article1" onClick={toggle}>
+                THING 1
+              </SidebarLink>
+              <SidebarLink to="article2" onClick={toggle}>
+                THING 2
+              </SidebarLink>
+              <SidebarLink to="article3" onClick={toggle}>
+                THING 3
+              </SidebarLink>
+              <NextLink href="/contact" onClick={toggle}>
+                CONTACT
+              </NextLink>
+              <SidebarLink to="home" onClick={toggle}>
+                HOME
+              </SidebarLink>
+            </SidebarMenu>
+          </SidebarWrapper>
+        </SidebarLimits>
+      </>
+    );
+  }
   return (
     <>
       <SidebarLimits isOpen={isOpen} onClick={toggle}>
@@ -108,12 +147,12 @@ export default function Sidebar({ isOpen, toggle }) {
             <SidebarLink to="article3" onClick={toggle}>
               THING 3
             </SidebarLink>
-            <SidebarLink to="/contact" onClick={toggle}>
+            <NextLink href="/contact" onClick={toggle}>
               CONTACT
-            </SidebarLink>
-            <SidebarLink to="home" onClick={toggle}>
+            </NextLink>
+            <NextLink href="/" onClick={toggle}>
               HOME
-            </SidebarLink>
+            </NextLink>
           </SidebarMenu>
         </SidebarWrapper>
       </SidebarLimits>

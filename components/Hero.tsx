@@ -1,4 +1,5 @@
 import React from 'react';
+import { useRouter } from 'next/router';
 import styled from 'styled-components';
 import FadeIn from 'react-fade-in';
 
@@ -104,6 +105,7 @@ const ContactButton = styled.button`
 `;
 
 export default function Welcome() {
+  const router = useRouter();
   return (
     <Wrapper id={'home'}>
       <BackImage>
@@ -116,7 +118,9 @@ export default function Welcome() {
                 time tested methods blended with the most recent medical
                 research.
               </About>
-              <ContactButton>CONTACT US</ContactButton>
+              <ContactButton onClick={() => router.push('/contact')}>
+                CONTACT US
+              </ContactButton>
             </WelcomeCard>
           </FadeIn>
         </CardPlaceing>
