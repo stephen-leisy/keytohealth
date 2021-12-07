@@ -31,6 +31,10 @@ const BackImage = styled.div`
     width: 100vh;
     height: 160vh;
   }
+
+  @media screen and (max-height: 600px) {
+    height: 200vh;
+  } ;
 `;
 
 const CardPlaceing = styled.div`
@@ -64,6 +68,16 @@ const WelcomeCard = styled.div`
   @media screen and (max-width: 414px) {
     width: 100vh;
     height: 90vh;
+  }
+
+  @media screen and (max-height: 900px) {
+    width: 110vh;
+    height: 50vh;
+  }
+
+  @media screen and (max-height: 600px) {
+    width: 140vh;
+    height: 80vh;
   }
 `;
 
