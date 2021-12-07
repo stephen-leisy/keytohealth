@@ -9,6 +9,11 @@ const Wrapper = styled.main`
   padding: 0;
   margin: 0;
 
+  @media screen and (max-height: 600px) {
+    width: 100%;
+    height: 190vh;
+  }
+
   /* background-color: ${({ theme }) => theme.colors.lcream}; */
 `;
 
@@ -24,11 +29,6 @@ const BackImage = styled.div`
   background-attachment: fixed;
   /* position: absolute; */
   z-index: 1;
-
-  @media screen and (max-height: 600px) {
-    width: 100%;
-    height: 190vh;
-  }
 
   @media screen and (max-width: 414px) {
     background-position: 60% 50%;
