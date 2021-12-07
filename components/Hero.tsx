@@ -11,11 +11,11 @@ const Wrapper = styled.main`
   margin: 0;
 
   @media screen and (max-height: 600px) {
-    width: 180vh;
+    width: 100%;
     height: 190vh;
   }
   @media screen and (max-width: 414px) {
-    width: 100vh;
+    width: 100%;
     height: 190vh;
   }
 
@@ -77,7 +77,7 @@ const WelcomeCard = styled.div`
   border: black 1px solid;
 
   @media screen and (max-height: 600px) {
-    width: 100vh;
+    width: 100%;
     height: 80vh;
   }
 
