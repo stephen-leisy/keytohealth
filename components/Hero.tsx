@@ -26,7 +26,7 @@ const BackImage = styled.div`
   z-index: 1;
 
   @media screen and (max-height: 600px) {
-    width: 100vw;
+    width: 100vh;
     height: 190vh;
   }
 
