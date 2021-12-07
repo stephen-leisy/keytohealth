@@ -4,7 +4,7 @@ import styled from 'styled-components';
 import FadeIn from 'react-fade-in';
 
 const Wrapper = styled.main`
-  height: 100vh;
+  height: 110vh;
   width: 100%;
   background-color: red;
   padding: 0;
@@ -12,6 +12,10 @@ const Wrapper = styled.main`
 
   @media screen and (max-height: 600px) {
     width: 100%;
+    height: 190vh;
+  }
+  @media screen and (max-width: 414px) {
+    width: 100vh;
     height: 190vh;
   }
 
@@ -40,7 +44,7 @@ const BackImage = styled.div`
 
   @media screen and (max-height: 600px) {
     height: 200vh;
-    width: 100%;
+    width: 100vh;
   } ;
 `;
 
