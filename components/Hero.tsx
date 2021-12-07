@@ -33,7 +33,7 @@ const BackImage = styled.div`
   @media screen and (max-width: 414px) {
     background-position: 60% 50%;
     background-attachment: scroll;
-    width: 100vw;
+    width: 100vh;
     height: 190vh;
   }
 
