@@ -37,10 +37,10 @@ const BackImage = styled.div`
     height: 190vh;
   }
 
-  /* @media screen and (max-height: 600px) {
+  @media screen and (max-height: 600px) {
     height: 200vh;
-    width: 100vh;
-  } ; */
+    width: 100%;
+  } ;
 `;
 
 const CardPlaceing = styled.div`
