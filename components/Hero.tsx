@@ -25,10 +25,15 @@ const BackImage = styled.div`
   /* position: absolute; */
   z-index: 1;
 
+  @media screen and (max-height: 600px) {
+    width: 100vw;
+    height: 190vh;
+  }
+
   @media screen and (max-width: 414px) {
     background-position: 60% 50%;
     background-attachment: scroll;
-    width: 100vh;
+    width: 100vw;
     height: 190vh;
   }
 
