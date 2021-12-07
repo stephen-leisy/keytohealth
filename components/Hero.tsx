@@ -66,6 +66,11 @@ const WelcomeCard = styled.div`
   flex-direction: column;
   border: black 1px solid;
 
+  @media screen and (max-height: 600px) {
+    width: 100vh;
+    height: 80vh;
+  }
+
   @media screen and (max-width: 414px) {
     width: 100vh;
     height: 90vh;
@@ -74,11 +79,6 @@ const WelcomeCard = styled.div`
   /* @media screen and (max-height: 900px) {
     width: 110vh;
     height: 50vh;
-  }
-
-  @media screen and (max-height: 600px) {
-    width: 140vh;
-    height: 80vh;
   } */
 `;
 
