@@ -71,7 +71,7 @@ const WelcomeCard = styled.div`
     height: 90vh;
   }
 
-  @media screen and (max-height: 900px) {
+  /* @media screen and (max-height: 900px) {
     width: 110vh;
     height: 50vh;
   }
@@ -79,7 +79,7 @@ const WelcomeCard = styled.div`
   @media screen and (max-height: 600px) {
     width: 140vh;
     height: 80vh;
-  }
+  } */
 `;
 
 const Header = styled.h2`
