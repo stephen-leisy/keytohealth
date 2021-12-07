@@ -32,10 +32,10 @@ const BackImage = styled.div`
     height: 160vh;
   }
 
-  @media screen and (max-height: 600px) {
+  /* @media screen and (max-height: 600px) {
     height: 200vh;
     width: 100vh;
-  } ;
+  } ; */
 `;
 
 const CardPlaceing = styled.div`
