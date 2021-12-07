@@ -11,7 +11,7 @@ const Wrapper = styled.main`
   margin: 0;
 
   @media screen and (max-height: 600px) {
-    width: 190vh;
+    width: 180vh;
     height: 190vh;
   }
   @media screen and (max-width: 414px) {
