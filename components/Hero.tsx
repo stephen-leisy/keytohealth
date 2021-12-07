@@ -4,8 +4,8 @@ import styled from 'styled-components';
 import FadeIn from 'react-fade-in';
 
 const Wrapper = styled.main`
-  height: 100%;
-  width: 100vh;
+  height: 100vh;
+  width: 100%;
   padding: 0;
   margin: 0;
 
