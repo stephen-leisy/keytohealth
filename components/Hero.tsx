@@ -11,7 +11,7 @@ const Wrapper = styled.main`
   margin: 0;
 
   @media screen and (max-height: 600px) {
-    width: 100%;
+    width: 100vh;
     height: 190vh;
   }
   @media screen and (max-width: 414px) {
@@ -84,6 +84,8 @@ const WelcomeCard = styled.div`
   @media screen and (max-width: 414px) {
     width: 100vh;
     height: 90vh;
+    border-top: black 1px solid;
+    border-bottom: none;
   }
 
   /* @media screen and (max-height: 900px) {
