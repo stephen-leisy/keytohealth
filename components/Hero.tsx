@@ -6,6 +6,7 @@ import FadeIn from 'react-fade-in';
 const Wrapper = styled.main`
   height: 100vh;
   width: 100%;
+  background-color: red;
   padding: 0;
   margin: 0;
 
@@ -19,7 +20,7 @@ const Wrapper = styled.main`
 
 const BackImage = styled.div`
   height: 100vh;
-  width: 100vh;
+  width: 100%;
   display: block;
   background-image: url(${'https://www.patriciagreencellars.com/assets/client/Image/AndersonFamily/AndersonFamilyVineyard.png'});
   -webkit-background-size: cover;
