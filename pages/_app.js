@@ -1,4 +1,5 @@
 import { getMiddlewareManifest } from 'next/dist/client/route-loader';
+import React, { useState, useEffect } from 'react';
 import { createGlobalStyle, ThemeProvider } from 'styled-components';
 import Layout from '../components/Layout.tsx';
 import '../styles/globals.css';
@@ -25,17 +26,22 @@ const theme = {
     lbrown: '#eda268',
     cream: '#ffd1ad',
     lcream: '#ffdcc2',
-    green : '#245501'
+    green: '#245501',
   },
 };
 
 export default function App({ Component, pageProps }) {
+  const [site, setSite] = useState('');
+
+  useEffect((site) => {
+    setSite(document.URL);
+  });
   return (
     <>
       <GlobalStyle />
 
       <ThemeProvider theme={theme}>
-        <Layout>
+        <Layout site={site}>
           <Component {...pageProps} />
         </Layout>
       </ThemeProvider>

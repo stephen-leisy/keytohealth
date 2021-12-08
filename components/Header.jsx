@@ -77,14 +77,14 @@ const MobileIcon = styled.div`
   }
 `;
 
-const Header = ({ top, toggle }) => {
+const Header = ({ top, toggle, site }) => {
   return (
     <ContainerHeader top={top}>
       <Logo>Key To Health</Logo>
       <MobileIcon onClick={toggle}>
         <FaBars />
       </MobileIcon>
-      <Nav />
+      <Nav site={site} />
     </ContainerHeader>
   );
 };

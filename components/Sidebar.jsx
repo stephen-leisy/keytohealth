@@ -100,7 +100,7 @@ export default function Sidebar({ isOpen, toggle }) {
   }, []);
 
   let site = url.split('/')[3];
-  console.log('testin: ', site);
+  
   if (!site) {
     return (
       <>

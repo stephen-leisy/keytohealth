@@ -1,3 +1,4 @@
+import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { Link as ScrollLink } from 'react-scroll';
 import styled from 'styled-components';
@@ -54,18 +55,41 @@ const BLink = styled(ScrollLink)`
   }
 `;
 
-export default function Nav() {
-  return (
-    <RouterWrapper>
-      <RouterLinks>
-        <RouterLink>
-          <BLink to="home">HOME</BLink>
-          <BLink to="article1">THING 1</BLink>
-          <BLink to="article2">THING 2</BLink>
-          <BLink to="article3">THING 3</BLink>
-          {/* <ALink href="/about">ABOUT</ALink> */}
-        </RouterLink>
-      </RouterLinks>
-    </RouterWrapper>
-  );
+export default function Nav({ site, onClick }) {
+  // const [url, setUrl] = useState('');
+  // useEffect(() => {
+  //   setUrl(document.URL);
+  // }, []);
+
+  let page = site.split('/')[3];
+  console.log('heeere: ', page);
+  if (!page) {
+    return (
+      <RouterWrapper>
+        <RouterLinks>
+          <RouterLink>
+            <BLink to="article1">THING 1</BLink>
+            <BLink to="article2">THING 2</BLink>
+            <BLink to="article3">THING 3</BLink>
+            <ALink href="/contact">CONTACT</ALink>
+            {/* <ALink href="/about">ABOUT</ALink> */}
+          </RouterLink>
+        </RouterLinks>
+      </RouterWrapper>
+    );
+  } else {
+    return (
+      <RouterWrapper>
+        <RouterLinks>
+          <RouterLink>
+            <ALink href="/">HOME</ALink>
+            <BLink to="article1">THING 1</BLink>
+            <BLink to="article2">THING 2</BLink>
+            <BLink to="article3">THING 3</BLink>
+            {/* <ALink href="/about">ABOUT</ALink> */}
+          </RouterLink>
+        </RouterLinks>
+      </RouterWrapper>
+    );
+  }
 }

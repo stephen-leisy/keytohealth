@@ -20,11 +20,16 @@ const Page = styled.main`
   padding: 0;
 `;
 
-const Layout: React.FunctionComponent<{ children: any }> = ({ children }) => {
+const Layout: React.FunctionComponent<{ children: any; site: string }> = ({
+  children,
+  site,
+}) => {
   const [currentScroll, setCurrentScroll] = React.useState(0);
   const [top, setTop] = React.useState(false);
   const [isOpen, setIsOpen] = useState(false);
   const scrollY = useScrollPosition(30 /*frames per second*/);
+  // const [url, setUrl] = useState('');
+  // const [site, setSite] = useState('');
 
   const scrollHeader = (scrollY) => {
     if (scrollY > 20) {
@@ -40,12 +45,14 @@ const Layout: React.FunctionComponent<{ children: any }> = ({ children }) => {
 
   useEffect(() => {
     scrollHeader(scrollY);
+
+    // setSite(url.split('/')[3]);
   }, [scrollY]);
 
   return (
     <Page>
       <HeadInfo />
-      <Header top={top} toggle={toggle} />
+      <Header top={top} toggle={toggle} site={site} />
       <Sidebar isOpen={isOpen} toggle={toggle} />
 
       {children}

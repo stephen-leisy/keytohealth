@@ -27,6 +27,12 @@ export default function Home() {
   const [isOpen, setIsOpen] = useState(false);
   const scrollY = useScrollPosition(30 /*frames per second*/);
 
+  // useEffect(() => {
+  //   setUrl(document.URL);
+  // }, []);
+
+  // let site = url.split('/')[3];
+
   const scrollHeader = (scrollY) => {
     if (scrollY > 20) {
       setTop(true);

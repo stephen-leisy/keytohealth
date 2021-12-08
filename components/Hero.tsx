@@ -23,7 +23,7 @@ const Wrapper = styled.main`
 `;
 
 const BackImage = styled.div`
-  height: 100vh;
+  height: 110vh;
   width: 100%;
   display: block;
   background-image: url(${'https://www.patriciagreencellars.com/assets/client/Image/AndersonFamily/AndersonFamilyVineyard.png'});
