@@ -47,7 +47,7 @@ const NavToggle = styled.ul`
 
 const ToggleHeader = styled.li`
   list-style: none;
-  font-size: 2.2rem;
+  font-size: 1.8rem;
   position: relative;
   z-index: 10;
 
@@ -61,7 +61,7 @@ const ToggleHeader = styled.li`
 
 const ToggleTreatmentHeader = styled.li`
   list-style: none;
-  font-size: 2.2rem;
+  font-size: 1.8rem;
   position: relative;
   z-index: 10;
 
@@ -101,7 +101,7 @@ const ToggleLink = styled.li`
 
 const ContactHeader = styled.li`
   list-style: none;
-  font-size: 2.2rem;
+  font-size: 1.8rem;
   position: relative;
   z-index: 10;
 `;
@@ -132,7 +132,7 @@ const ALink = styled(Link)`
 const BLink = styled(ScrollLink)`
   background: transparent;
   cursor: pointer;
-  font-size: 2.2rem;
+  font-size: 1.8rem;
   padding: 15px;
 
   &:hover {
@@ -147,7 +147,7 @@ const LinkStyle = styled.a`
   background: transparent;
   color: black;
   cursor: pointer;
-  font-size: 2rem;
+  font-size: 1.6rem;
   -webkit-text-stroke: 0.75px black;
 
   &:hover {
