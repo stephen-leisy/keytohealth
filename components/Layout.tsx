@@ -27,6 +27,7 @@ const Layout: React.FunctionComponent<{ children: any; site: string }> = ({
   const [currentScroll, setCurrentScroll] = React.useState(0);
   const [top, setTop] = React.useState(false);
   const [isOpen, setIsOpen] = useState(false);
+  const [home, setHome] = useState(false);
   const scrollY = useScrollPosition(30 /*frames per second*/);
   // const [url, setUrl] = useState('');
   // const [site, setSite] = useState('');
@@ -39,12 +40,23 @@ const Layout: React.FunctionComponent<{ children: any; site: string }> = ({
     }
   };
 
+  const showHome = (scrollY) => {
+    if (scrollY > 800) {
+      setHome(true);
+    } else {
+      setHome(false);
+    }
+  };
+
+  console.log('why: ', home);
+
   const toggle = () => {
     setIsOpen(!isOpen);
   };
 
   useEffect(() => {
     scrollHeader(scrollY);
+    showHome(scrollY);
 
     // setSite(url.split('/')[3]);
   }, [scrollY]);
@@ -52,7 +64,7 @@ const Layout: React.FunctionComponent<{ children: any; site: string }> = ({
   return (
     <Page>
       <HeadInfo />
-      <Header top={top} toggle={toggle} site={site} />
+      <Header top={top} toggle={toggle} site={site} home={home} />
       <Sidebar isOpen={isOpen} toggle={toggle} />
 
       {children}

@@ -25,6 +25,7 @@ export default function Home() {
   const [currentScroll, setCurrentScroll] = React.useState(0);
   const [top, setTop] = React.useState(false);
   const [isOpen, setIsOpen] = useState(false);
+
   const scrollY = useScrollPosition(30 /*frames per second*/);
 
   // useEffect(() => {

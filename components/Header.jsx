@@ -1,3 +1,4 @@
+import React, { useState, useEffect } from 'react';
 import Nav from './Nav';
 import { FaBars } from 'react-icons/fa';
 import styled from 'styled-components';
@@ -6,12 +7,14 @@ const ContainerHeader = styled.div`
   /* position: ${({ tipTop }) => (tipTop ? 'fixed' : 'absolute')}; */
   position: fixed;
   margin-top: ${({ top }) => (top ? '0px' : '80px')};
-  height: ${({ top }) => (top ? '8vh' : '12vh')};
+  height: ${({ treatmentList, aboutList }) =>
+    treatmentList || aboutList ? '10vh' : '10vh'};
+
   width: 100%;
   /* background-color: ${({ theme }) => theme.colors.cream}; */
   /* background: rgba(255, 209, 173, 0.7); */
   background: ${({ top, theme }) =>
-    top ? theme.colors.cream : 'rgba(255, 209, 173, 0.5)'};
+    top ? '#fff' : 'rgba(255, 209, 173, 0.5)'};
   transition: 0.3s ease-in-out;
   border-bottom: 5px solid black;
   border-top: 5px solid black;
@@ -49,11 +52,14 @@ const Border = styled.div`
   /* background: rgba(255, 209, 173, 0.7); */
 `;
 
-const Logo = styled.h2`
+const Logo = styled.li`
   font-family: 'Abril Fatface', cursive;
   color: ${({ theme }) => theme.colors.green};
   font-size: 2.8rem;
   margin-left: 4%;
+  padding-top: 30px;
+  list-style: none;
+  position: relative;
 `;
 
 const MobileIcon = styled.div`
@@ -77,14 +83,86 @@ const MobileIcon = styled.div`
   }
 `;
 
-const Header = ({ top, toggle, site }) => {
+const Header = ({ top, toggle, site, home }) => {
+  const [treatmentList, setTreatmentList] = useState(false);
+  const [aboutList, setAboutList] = useState(false);
+  const [dropdown, setDropdown] = useState(false);
+
+  // const toggleTreatments = () => {
+  //   // setTreatmentList(!treatmentList);
+  //   setAboutList(false);
+  // };
+
+  // const toggleAbout = () => {
+  //   setAboutList(!aboutList);
+  //   // setTreatmentList(false);
+  // };
+
+  // const onMouseEnter = (e) => {
+  //   if (window.innerWidth < 960) {
+  //     setAboutList(false);
+  //     setTreatmentList(false);
+  //   } else if (e.target.value == 2) {
+  //     // setAboutList(true);
+  //     setTreatmentList(true);
+  //   } else if (e.target.value == 1) {
+  //     setAboutList(true);
+  //   }
+  // };
+
+  const handleAboutMouseOver = () => {
+    setAboutList(true);
+    console.log('word up');
+  };
+
+  const handleTreatmentMouseOver = () => {
+    setTreatmentList(true);
+    console.log('eh?');
+  };
+  // const onmouseover = () => {
+  //   setTreatmentList(true);
+  // };
+
+  // const onmouseenter = (e) => {
+  //   if (window.innerWidth > 960) {
+  //     setAboutList(false);
+  //   } else {
+  //     setAboutList(true);
+  //   }
+  // };
+
+  const onMouseLeave = () => {
+    if (window.innerWidth < 960) {
+      setAboutList(false);
+
+      setTreatmentList(false);
+    } else {
+      setAboutList(false);
+      setTreatmentList(false);
+    }
+  };
+
   return (
-    <ContainerHeader top={top}>
+    <ContainerHeader
+      top={top}
+      treatmentList={treatmentList}
+      aboutList={aboutList}
+    >
       <Logo>Key To Health</Logo>
       <MobileIcon onClick={toggle}>
         <FaBars />
       </MobileIcon>
-      <Nav site={site} />
+      <Nav
+        site={site}
+        home={home}
+        // toggleTreatments={toggleTreatments}
+        // toggleAbout={toggleAbout}
+        treatmentList={treatmentList}
+        aboutList={aboutList}
+        onMouseLeave={onMouseLeave}
+        handleAboutMouseOver={handleAboutMouseOver}
+        handleTreatmentMouseOver={handleTreatmentMouseOver}
+      />
     </ContainerHeader>
   );
 };
