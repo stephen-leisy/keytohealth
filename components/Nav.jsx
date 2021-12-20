@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { Link as ScrollLink } from 'react-scroll';
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
 
 const RouterWrapper = styled.div`
   width: 60%;
@@ -11,10 +11,6 @@ const RouterWrapper = styled.div`
   justify-content: flex-start;
   align-items: flex-start;
   padding-top: 20px;
-  /* justify-content: flex-end; */
-
-  /* margin-right: 4%; */
-  /* font-size: 2rem; */
   font-family: 'Abril Fatface', cursive;
   color: ${({ theme }) => theme.colors.brown};
 
@@ -22,17 +18,6 @@ const RouterWrapper = styled.div`
     display: none;
   }
 `;
-
-// const RouterLinks = styled.ul`
-//   text-decoration: none;
-//   border: 3px solid gold;
-//   justify-content: flex-start;
-//   flex-direction: row;
-//   list-style: none;
-//   font-size: 2rem;
-//   font-family: 'Abril Fatface', cursive;
-//   color: ${({ theme }) => theme.colors.brown};
-// `;
 
 const NavToggle = styled.ul`
   width: 25%;
@@ -75,28 +60,23 @@ const ToggleTreatmentHeader = styled.li`
 const ToggleGroup = styled.ul`
   display: ${({ treatmentList, aboutList }) =>
     treatmentList || aboutList ? 'flex' : 'none'};
+  animation: ${(props) => (props.out ? fadeOut : fadeIn)} 1s linear;
+  transition: visibility 0.5s linear;
+  transition: 0.9s ease-in-out;
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  border: solid black 3px;
+  /* border: solid black 3px; */
   padding: 0px;
   font-size: 1.6rem;
-  background-color: ${({ theme }) => theme.colors.lcream};
+  /* background-color: ${({ theme }) => theme.colors.lcream}; */
 `;
 
 const ToggleLink = styled.li`
-  /* position: absolute; */
-  /* margin-top: 30vh; */
-  /* z-index: 20; */
-  /* display: ${({ treatmentList, aboutList }) =>
-    treatmentList || aboutList ? 'flex' : 'none'}; */
-
+  transition: 0.9s ease-in-out;
   align-items: center;
   justify-content: center;
-  /* visibility: hidden; */
   list-style: none;
-
-  /* background-color: ${({ theme }) => theme.colors.cream}; */
 `;
 
 const ContactHeader = styled.li`
@@ -105,15 +85,6 @@ const ContactHeader = styled.li`
   position: relative;
   z-index: 10;
 `;
-
-// const RouterLink = styled.li`
-//   text-decoration: none;
-//   /* justify-content: flex-start; */
-//   color: ${({ theme }) => theme.colors.brown};
-//   font-size: 2rem;
-//   font-family: 'Abril Fatface', cursive;
-//   border: 5px solid orange;
-// `;
 
 const ALink = styled(Link)`
   background: transparent;
@@ -131,14 +102,16 @@ const ALink = styled(Link)`
 
 const BLink = styled(ScrollLink)`
   background: transparent;
+  color: black;
   cursor: pointer;
-  font-size: 1.8rem;
-  padding: 15px;
+  font-size: 1.6rem;
+  -webkit-text-stroke: 0.75px black;
 
   &:hover {
     transition: all 0.2s ease-in-out;
-    color: ${({ theme }) => theme.colors.lbrown};
+    color: ${({ theme }) => theme.colors.green};
     -webkit-text-stroke: 0.5px black;
+    text-decoration: underline;
   }
 `;
 
@@ -163,7 +136,27 @@ const HiddenLink = styled(ScrollLink)`
   cursor: pointer;
   padding: 15px;
   visibility: ${({ home }) => (home ? 'visible' : 'hidden')};
-  /* transition: ease-in-out 0.4s; */
+`;
+
+const fadeIn = keyframes`
+  from {
+    opacity: 0;
+  }
+
+  to {
+
+    opacity: 1;
+  }
+`;
+
+const fadeOut = keyframes`
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
 `;
 
 export default function Nav({
@@ -183,7 +176,6 @@ export default function Nav({
   if (!page) {
     return (
       <RouterWrapper>
-        {/* <RouterLinks> */}
         <NavToggle>
           <ToggleHeader>
             <HiddenLink to="home" home={home}>
@@ -194,13 +186,8 @@ export default function Nav({
         <NavToggle>
           <ToggleHeader
             onClick={toggleTreatments}
-            // setTreatmentList={setTreatmentList}
-            // name="treatments"
             onMouseOver={handleTreatmentMouseOver}
-            // onMouseEnter={onMouseEnter}
-            // onmouseover={onmouseover}
             onMouseLeave={onMouseLeave}
-            // value={2}
           >
             TREATMENTS
           </ToggleHeader>
@@ -229,7 +216,6 @@ export default function Nav({
         <NavToggle>
           <ToggleHeader
             onClick={toggleAbout}
-            // onMouseEnter={onMouseEnter}
             onMouseLeave={onMouseLeave}
             onMouseOver={handleAboutMouseOver}
           >
@@ -238,7 +224,6 @@ export default function Nav({
           <ToggleGroup
             aboutList={aboutList}
             onClick={toggleAbout}
-            // onMouseEnter={onMouseEnter}
             onMouseLeave={onMouseLeave}
             onMouseOver={handleAboutMouseOver}
             value="2"
@@ -267,17 +252,12 @@ export default function Nav({
             </ALink>
           </ContactHeader>
         </NavToggle>
-        {/* </RouterLinks> */}
       </RouterWrapper>
     );
   } else {
     return (
       <RouterWrapper>
-        {/* <RouterLinks> */}
-        {/* <RouterLink> */}
         <ALink href="/">HOME</ALink>
-        {/* </RouterLink> */}
-        {/* </RouterLinks> */}
       </RouterWrapper>
     );
   }
