@@ -7,7 +7,6 @@ const RouterWrapper = styled.div`
   width: 60%;
   height: 100%;
   display: flex;
-  /* position: absolute; */
   justify-content: flex-start;
   align-items: flex-start;
   padding-top: 20px;
@@ -32,7 +31,7 @@ const NavToggle = styled.ul`
 
 const ToggleHeader = styled.li`
   list-style: none;
-  font-size: 1.8rem;
+  font-size: 1.5rem;
   position: relative;
   z-index: 10;
 
@@ -46,7 +45,7 @@ const ToggleHeader = styled.li`
 
 const ToggleTreatmentHeader = styled.li`
   list-style: none;
-  font-size: 1.8rem;
+  font-size: 1.5rem;
   position: relative;
   z-index: 10;
 
@@ -68,7 +67,7 @@ const ToggleGroup = styled.ul`
   flex-direction: column;
   /* border: solid black 3px; */
   padding: 0px;
-  font-size: 1.6rem;
+  font-size: 1.3rem;
   /* background-color: ${({ theme }) => theme.colors.lcream}; */
 `;
 
@@ -81,7 +80,7 @@ const ToggleLink = styled.li`
 
 const ContactHeader = styled.li`
   list-style: none;
-  font-size: 1.8rem;
+  font-size: 1.5rem;
   position: relative;
   z-index: 10;
 `;
@@ -104,7 +103,7 @@ const BLink = styled(ScrollLink)`
   background: transparent;
   color: black;
   cursor: pointer;
-  font-size: 1.6rem;
+  font-size: 1.3rem;
   -webkit-text-stroke: 0.75px black;
 
   &:hover {
@@ -120,7 +119,7 @@ const LinkStyle = styled.a`
   background: transparent;
   color: black;
   cursor: pointer;
-  font-size: 1.6rem;
+  font-size: 1.3rem;
   -webkit-text-stroke: 0.75px black;
 
   &:hover {

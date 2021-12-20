@@ -41,9 +41,8 @@ const Border = styled.div`
 const Logo = styled.li`
   font-family: 'Abril Fatface', cursive;
   color: ${({ theme }) => theme.colors.green};
-  font-size: 2.8rem;
+  font-size: 2.5rem;
   margin-left: 4%;
-  /* padding-top: 30px; */
   list-style: none;
   position: relative;
 `;
