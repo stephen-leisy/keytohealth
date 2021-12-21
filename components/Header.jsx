@@ -71,22 +71,19 @@ const MobileIcon = styled.div`
 const Header = ({ top, toggle, site, home }) => {
   const [treatmentList, setTreatmentList] = useState(false);
   const [aboutList, setAboutList] = useState(false);
-  const [dropdown, setDropdown] = useState(false);
+  // const [dropdown, setDropdown] = useState(false);
 
   const handleAboutMouseOver = () => {
     setAboutList(true);
-    console.log('word up');
   };
 
   const handleTreatmentMouseOver = () => {
     setTreatmentList(true);
-    console.log('eh?');
   };
 
   const onMouseLeave = () => {
     if (window.innerWidth < 960) {
       setAboutList(false);
-
       setTreatmentList(false);
     } else {
       setAboutList(false);

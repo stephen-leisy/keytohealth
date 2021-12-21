@@ -6,7 +6,7 @@ import FadeIn from 'react-fade-in';
 const Wrapper = styled.main`
   height: 110vh;
   width: 100%;
-  background-color: red;
+  background-color: #f5f5f5;
   padding: 0;
   margin: 0;
 

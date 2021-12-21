@@ -1,20 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import useScrollPosition from '@react-hook/window-scroll';
-import HeadInfo from '../components/HeadInfo';
-import Header from '../components/Header';
-import dynamic from 'next/dynamic';
 import Welcome from '../components/Hero';
-import Footer from '../components/Footer';
 import Card from '../components/Card';
 import ReverseCard from '../components/ReverseCard';
 import styled from 'styled-components';
 import Sidebar from '../components/Sidebar';
 
-// const Card = dynamic(() => import('./Card'));
-
-// import Image from 'next/image';
-// import styles from '../styles/Home.module.css';
-// import { myHeader } from './indexElements.jsx';
 
 const Title = styled.h1`
   font-size: 50px;
@@ -27,12 +18,6 @@ export default function Home() {
   const [isOpen, setIsOpen] = useState(false);
 
   const scrollY = useScrollPosition(30 /*frames per second*/);
-
-  // useEffect(() => {
-  //   setUrl(document.URL);
-  // }, []);
-
-  // let site = url.split('/')[3];
 
   const scrollHeader = (scrollY) => {
     if (scrollY > 20) {

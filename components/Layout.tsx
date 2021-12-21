@@ -27,16 +27,21 @@ const Layout: React.FunctionComponent<{ children: any; site: string }> = ({
   const [currentScroll, setCurrentScroll] = React.useState(0);
   const [top, setTop] = React.useState(false);
   const [isOpen, setIsOpen] = useState(false);
+  const [whichPage, setWhichPage] = useState('');
   const [home, setHome] = useState(false);
   const scrollY = useScrollPosition(30 /*frames per second*/);
   // const [url, setUrl] = useState('');
   // const [site, setSite] = useState('');
 
+  let page = site.split('/')[3];
+
   const scrollHeader = (scrollY) => {
-    if (scrollY > 20) {
+    if (scrollY > 20 || whichPage == 'contact') {
       setTop(true);
+      console.log('truth');
     } else {
       setTop(false);
+      console.log('false');
     }
   };
 
@@ -48,7 +53,7 @@ const Layout: React.FunctionComponent<{ children: any; site: string }> = ({
     }
   };
 
-  console.log('why: ', home);
+  // console.log('why: ', home);
 
   const toggle = () => {
     setIsOpen(!isOpen);
@@ -57,9 +62,10 @@ const Layout: React.FunctionComponent<{ children: any; site: string }> = ({
   useEffect(() => {
     scrollHeader(scrollY);
     showHome(scrollY);
+    setWhichPage(page);
 
     // setSite(url.split('/')[3]);
-  }, [scrollY]);
+  });
 
   return (
     <Page>

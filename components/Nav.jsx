@@ -256,7 +256,82 @@ export default function Nav({
   } else {
     return (
       <RouterWrapper>
-        <ALink href="/">HOME</ALink>
+        <NavToggle>
+          <ContactHeader>
+            <ALink href="/">
+              <LinkStyle>HOME</LinkStyle>
+            </ALink>
+          </ContactHeader>
+        </NavToggle>
+        <NavToggle>
+          <ToggleHeader
+            onClick={toggleTreatments}
+            onMouseOver={handleTreatmentMouseOver}
+            onMouseLeave={onMouseLeave}
+          >
+            TREATMENTS
+          </ToggleHeader>
+          <ToggleGroup
+            treatmentList={treatmentList}
+            onMouseOver={handleTreatmentMouseOver}
+            onMouseLeave={onMouseLeave}
+          >
+            <ToggleLink onMouseLeave={onMouseLeave}>
+              <BLink to="article1" onClick={toggleTreatments}>
+                Treatment 1
+              </BLink>
+            </ToggleLink>
+            <ToggleLink>
+              <BLink to="article2" onClick={toggleTreatments}>
+                Treatment 2
+              </BLink>
+            </ToggleLink>
+            <ToggleLink>
+              <BLink to="article3" onClick={toggleTreatments}>
+                Treatment 3
+              </BLink>
+            </ToggleLink>
+          </ToggleGroup>
+        </NavToggle>
+        <NavToggle>
+          <ToggleHeader
+            onClick={toggleAbout}
+            onMouseLeave={onMouseLeave}
+            onMouseOver={handleAboutMouseOver}
+          >
+            ABOUT US
+          </ToggleHeader>
+          <ToggleGroup
+            aboutList={aboutList}
+            onClick={toggleAbout}
+            onMouseLeave={onMouseLeave}
+            onMouseOver={handleAboutMouseOver}
+            value="2"
+          >
+            <ToggleLink>
+              <ALink href="/contact">
+                <LinkStyle onClick={toggleAbout}>Dr. Keith Dickson</LinkStyle>
+              </ALink>
+            </ToggleLink>
+            <ToggleLink>
+              <ALink href="">
+                <LinkStyle>Dr. Bruce Dickson</LinkStyle>
+              </ALink>
+            </ToggleLink>
+            <ToggleLink>
+              <ALink href="">
+                <LinkStyle>About The Clinic</LinkStyle>
+              </ALink>
+            </ToggleLink>
+          </ToggleGroup>
+        </NavToggle>
+        <NavToggle>
+          <ContactHeader>
+            <ALink href="/contact">
+              <LinkStyle>CONTACT</LinkStyle>
+            </ALink>
+          </ContactHeader>
+        </NavToggle>
       </RouterWrapper>
     );
   }
