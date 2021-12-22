@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 const CardWrapper = styled.div`
   height: 1000px;
-  width: 100vh;
+  width: 100%;
 
   /* background-color: ${({ theme }) => theme.colors.cream}; */
   background-color: #fff;
@@ -21,7 +21,7 @@ const CardWrapper = styled.div`
 
   @media screen and (max-width: 414px) {
     /* height: 800px; */
-    /* width: 100vh; */
+    width: 100vh;
   }
 `;
 
@@ -37,6 +37,7 @@ const ShadowBox = styled.div`
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    width: 90%;
   }
 
   @media screen and (max-width: 414px) {
