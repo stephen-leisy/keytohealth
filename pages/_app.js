@@ -12,7 +12,7 @@ const GlobalStyle = createGlobalStyle`
     height: 100%;
     width: 100%;
     overflow-x: hidden;
-    /* background-color: black; */
+    background-color: #f5f5f5;
   }
 `;
 
@@ -27,6 +27,7 @@ const theme = {
     cream: '#ffd1ad',
     lcream: '#ffdcc2',
     green: '#245501',
+    gold: '#D4AF37'
   },
 };
 

@@ -11,7 +11,7 @@ const RouterWrapper = styled.div`
   align-items: flex-start;
   padding-top: 20px;
   font-family: 'Abril Fatface', cursive;
-  color: ${({ theme }) => theme.colors.brown};
+  color: ${({ theme }) => theme.colors.gold};
 
   @media screen and (max-width: 1200px) {
     display: none;
@@ -25,7 +25,7 @@ const NavToggle = styled.ul`
   text-align: center;
   background: transparent;
   cursor: pointer;
-  color: ${({ theme }) => theme.colors.brown};
+  color: ${({ theme }) => theme.colors.gold};
   /* display: inline; */
 `;
 
@@ -34,6 +34,7 @@ const ToggleHeader = styled.li`
   font-size: 1.5rem;
   position: relative;
   z-index: 10;
+  -webkit-text-stroke: 1px black;
 
   &:hover {
     transition: all 0.2s ease-in-out;
@@ -88,9 +89,9 @@ const ContactHeader = styled.li`
 const ALink = styled(Link)`
   background: transparent;
   cursor: pointer;
-  color: ${({ theme }) => theme.colors.brown};
+  color: ${({ theme }) => theme.colors.gold};
+
   /* margin: 30px; */
-  border: 2px solid red;
 
   &:hover {
     transition: all 0.2s ease-in-out;
@@ -101,7 +102,8 @@ const ALink = styled(Link)`
 
 const BLink = styled(ScrollLink)`
   background: transparent;
-  color: black;
+  color: ${({ theme }) => theme.colors.gold};
+  /* color: black; */
   cursor: pointer;
   font-size: 1.3rem;
   -webkit-text-stroke: 0.75px black;
@@ -117,10 +119,10 @@ const BLink = styled(ScrollLink)`
 const LinkStyle = styled.a`
   /* margin-left: 15px; */
   background: transparent;
-  color: black;
+  color: ${({ theme }) => theme.colors.gold};
   cursor: pointer;
   font-size: 1.3rem;
-  -webkit-text-stroke: 0.75px black;
+  -webkit-text-stroke: 1px black;
 
   &:hover {
     transition: all 0.2s ease-in-out;

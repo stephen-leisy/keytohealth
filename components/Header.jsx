@@ -11,7 +11,7 @@ const ContainerHeader = styled.div`
 
   width: 100%;
   background: ${({ top, theme }) =>
-    top ? '#fff' : 'rgba(255, 209, 173, 0.5)'};
+    top ? '#fff' : 'rgba(245, 245, 245, 0.9);'};
   transition: 0.2s ease-in-out;
   border-bottom: 5px solid black;
   border-top: 5px solid black;

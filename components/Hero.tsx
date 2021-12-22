@@ -69,7 +69,8 @@ const WelcomeCard = styled.div`
   width: 80vh;
   height: 40vh;
   position: relative;
-  background: rgba(255, 209, 173, 0.5);
+  /* background: rgba(255, 209, 173, 0.5); */
+  background: rgba(245, 245, 245, 0.5);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -121,13 +122,15 @@ const ContactButton = styled.button`
   font-family: 'Abril Fatface', cursive;
   font-size: 1rem;
 
-  color: ${({ theme }) => theme.colors.green};
+  color: #000;
 
-  background-color: ${({ theme }) => theme.colors.cream};
+  background-color: ${({ theme }) => theme.colors.gold};
 
   &:hover {
     cursor: pointer;
-    color: ${({ theme }) => theme.colors.brown};
+    /* color: ${({ theme }) => theme.colors.brown}; */
+    color: ${({ theme }) => theme.colors.green};
+    font-size: 1.1rem;
     -webkit-text-stroke: 0.75px black;
   }
 `;

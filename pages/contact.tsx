@@ -7,8 +7,8 @@ const Main = styled.main`
   background-color: #f5f5f5;
 
   @media screen and (max-width: 1280px) {
-    height: 1600px;
-    width: 100vh;
+    height: 1400px;
+    width: 100%;
   }
 `;
 
