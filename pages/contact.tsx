@@ -8,7 +8,7 @@ const Main = styled.main`
 
   @media screen and (max-width: 1280px) {
     height: 1600px;
-    /* width: 100vh; */
+    width: 100vh;
   }
 `;
 
@@ -74,7 +74,7 @@ const MapWrapper = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 20px;
+  /* padding: 20px; */
 `;
 
 const contact = () => {
@@ -87,8 +87,8 @@ const contact = () => {
             <MapWrapper>
               <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2810.862874368643!2d-123.20074524908615!3d45.21011027899621!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x549548ddc025ac4b%3A0x8464c7695af0c6dd!2s119%20NE%203rd%20St%2C%20McMinnville%2C%20OR%2097128!5e0!3m2!1sen!2sus!4v1640117300088!5m2!1sen!2sus"
-                width="500vh"
-                height="500vh"
+                width="450vh"
+                height="450vh"
                 // style="border:0"
                 // allowfullscreen=""
                 loading="lazy"

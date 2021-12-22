@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { Link as ScrollLink } from 'react-scroll';
 import Link from 'next/link';
 import styled from 'styled-components';
@@ -119,52 +119,6 @@ const LinkStyle = styled.a`
 const NextLink = styled(Link)``;
 
 export default function Sidebar({ isOpen, toggle }) {
-  const [url, setUrl] = useState('');
-  useEffect(() => {
-    setUrl(document.URL);
-  }, []);
-
-  let site = url.split('/')[3];
-
-  if (!site) {
-    return (
-      <>
-        <SidebarLimits isOpen={isOpen} onClick={toggle}>
-          <Icon onCLick={toggle}>
-            <CloseIcon />
-          </Icon>
-          <SidebarWrapper>
-            <SidebarMenu>
-              <NextLink href="/treatment-one" onClick={toggle}>
-                <LinkStyle>TREATMENT ONE</LinkStyle>
-              </NextLink>
-              <NextLink href="/treatment-two" onClick={toggle}>
-                <LinkStyle>TREATMENT TWO</LinkStyle>
-              </NextLink>
-              <NextLink href="/treatment-three" onClick={toggle}>
-                <LinkStyle>TREATMENT THREE</LinkStyle>
-              </NextLink>
-              <NextLink href="/contact" onClick={toggle}>
-                <LinkStyle>DR. BRUCE DICKSON</LinkStyle>
-              </NextLink>
-              <NextLink href="/contact" onClick={toggle}>
-                <LinkStyle>DR. KEITH DICKSON</LinkStyle>
-              </NextLink>
-              <NextLink href="/contact" onClick={toggle}>
-                <LinkStyle>ABOUT THE CLINIC</LinkStyle>
-              </NextLink>
-              <NextLink href="/contact" onClick={toggle}>
-                <LinkStyle>CONTACT</LinkStyle>
-              </NextLink>
-              <NextLink href="/" onClick={toggle}>
-                <LinkStyle>HOME</LinkStyle>
-              </NextLink>
-            </SidebarMenu>
-          </SidebarWrapper>
-        </SidebarLimits>
-      </>
-    );
-  }
   return (
     <>
       <SidebarLimits isOpen={isOpen} onClick={toggle}>
@@ -173,20 +127,29 @@ export default function Sidebar({ isOpen, toggle }) {
         </Icon>
         <SidebarWrapper>
           <SidebarMenu>
-            <SidebarLink to="article1" onClick={toggle}>
-              THING 1
-            </SidebarLink>
-            <SidebarLink to="article2" onClick={toggle}>
-              THING 2
-            </SidebarLink>
-            <SidebarLink to="article3" onClick={toggle}>
-              THING 3
-            </SidebarLink>
+            <NextLink href="/treatment-one" onClick={toggle}>
+              <LinkStyle>TREATMENT ONE</LinkStyle>
+            </NextLink>
+            <NextLink href="/treatment-two" onClick={toggle}>
+              <LinkStyle>TREATMENT TWO</LinkStyle>
+            </NextLink>
+            <NextLink href="/treatment-three" onClick={toggle}>
+              <LinkStyle>TREATMENT THREE</LinkStyle>
+            </NextLink>
             <NextLink href="/contact" onClick={toggle}>
-              CONTACT
+              <LinkStyle>DR. BRUCE DICKSON</LinkStyle>
+            </NextLink>
+            <NextLink href="/contact" onClick={toggle}>
+              <LinkStyle>DR. KEITH DICKSON</LinkStyle>
+            </NextLink>
+            <NextLink href="/contact" onClick={toggle}>
+              <LinkStyle>ABOUT THE CLINIC</LinkStyle>
+            </NextLink>
+            <NextLink href="/contact" onClick={toggle}>
+              <LinkStyle>CONTACT</LinkStyle>
             </NextLink>
             <NextLink href="/" onClick={toggle}>
-              HOME
+              <LinkStyle>HOME</LinkStyle>
             </NextLink>
           </SidebarMenu>
         </SidebarWrapper>
