@@ -8,7 +8,8 @@ const CardWrapper = styled.div`
   width: 100%;
   display: flex;
   justify-content: center;
-  background-color: ${({ theme }) => theme.colors.lcream};
+  background-color: ${({ theme }) => theme.colors.green};
+  /* background-color: #000; */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -38,6 +39,7 @@ const CardHeader = styled.h2`
   height: 7vh;
   font-size: 3rem;
   font-weight: bold;
+  color: #fff;
 
   /* padding-top: 80px; */
 `;
@@ -48,6 +50,10 @@ const MeatBorder = styled.div`
   justify-content: center;
   align-items: center;
   width: 100%;
+
+  @media screen and (max-width: 1200px) {
+    flex-direction: column;
+  }
 `;
 
 const Image = styled.img`

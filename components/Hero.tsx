@@ -102,6 +102,7 @@ const Header = styled.h2`
   margin: 0;
   display: flex;
   justify-content: center;
+  text-align: center;
 `;
 
 const About = styled.p`
@@ -139,7 +140,7 @@ export default function Welcome() {
         <CardPlaceing>
           <FadeIn transitionDuration={2000}>
             <WelcomeCard>
-              <Header>DR. DICKSON - KEY TO HEALTH</Header>
+              <Header>UNLOCK YOUR HEALTH'S FULL POTENTIAL</Header>
               <About>
                 Offering non-invasive, natural therapies based on traditional,
                 time tested methods blended with the most recent medical

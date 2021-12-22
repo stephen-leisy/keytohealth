@@ -49,6 +49,10 @@ const MeatBorder = styled.div`
   justify-content: center;
   align-items: center;
   width: 100%;
+
+  @media screen and (max-width: 1200px) {
+    flex-direction: column-reverse;
+  }
 `;
 
 const Image = styled.img`

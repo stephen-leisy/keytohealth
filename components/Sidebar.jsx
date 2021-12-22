@@ -7,23 +7,24 @@ import { FaTimes } from 'react-icons/fa';
 const SidebarLimits = styled.main`
   position: fixed;
   z-index: 999;
-  width: 100%;
+  width: 50vw;
   height: 100%;
   background-color: #f8f0e3;
   display: grid;
   align-items: center;
   top: 0;
-  left: 0;
+  right: 0;
   transition: 0.3s ease-in-out;
   opacity: ${({ isOpen }) => (isOpen ? '100%' : '0')};
-  top: ${({ isOpen }) => (isOpen ? '0' : '-100%')};
+  right: ${({ isOpen }) => (isOpen ? '0' : '-100%')};
   overflow-x: visible;
+  border-left: solid black 5px;
 `;
 
 const Icon = styled.div`
   position: absolute;
   top: 1.2rem;
-  right: 1.5rem;
+  left: 1.5rem;
   background: transparent;
   font-size: 1.2rem;
   cursor: pointer;
@@ -44,7 +45,7 @@ const SidebarMenu = styled.ul`
   background-color: #f8f0e3;
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: repeat(5, 80px);
+  grid-template-rows: repeat(8, 60px);
   text-align: center;
 
   @media screen and (max-width: 480px) {
@@ -91,6 +92,22 @@ const SocialLink = styled.button`
   }
 `;
 
+const LinkStyle = styled.a`
+  /* margin-left: 15px; */
+  background: transparent;
+  color: black;
+  cursor: pointer;
+  font-size: 2rem;
+  -webkit-text-stroke: 0.75px black;
+
+  &:hover {
+    transition: all 0.2s ease-in-out;
+    color: ${({ theme }) => theme.colors.green};
+    -webkit-text-stroke: 0.5px black;
+    text-decoration: underline;
+  }
+`;
+
 const NextLink = styled(Link)``;
 
 export default function Sidebar({ isOpen, toggle }) {
@@ -100,7 +117,7 @@ export default function Sidebar({ isOpen, toggle }) {
   }, []);
 
   let site = url.split('/')[3];
-  
+
   if (!site) {
     return (
       <>
@@ -110,21 +127,30 @@ export default function Sidebar({ isOpen, toggle }) {
           </Icon>
           <SidebarWrapper>
             <SidebarMenu>
-              <SidebarLink to="article1" onClick={toggle}>
-                THING 1
-              </SidebarLink>
-              <SidebarLink to="article2" onClick={toggle}>
-                THING 2
-              </SidebarLink>
-              <SidebarLink to="article3" onClick={toggle}>
-                THING 3
-              </SidebarLink>
-              <NextLink href="/contact" onClick={toggle}>
-                CONTACT
+              <NextLink href="/treatment-one" onClick={toggle}>
+                <LinkStyle>TREATMENT ONE</LinkStyle>
               </NextLink>
-              <SidebarLink to="home" onClick={toggle}>
-                HOME
-              </SidebarLink>
+              <NextLink href="/treatment-two" onClick={toggle}>
+                <LinkStyle>TREATMENT TWO</LinkStyle>
+              </NextLink>
+              <NextLink href="/treatment-three" onClick={toggle}>
+                <LinkStyle>TREATMENT THREE</LinkStyle>
+              </NextLink>
+              <NextLink href="/contact" onClick={toggle}>
+                <LinkStyle>DR. BRUCE DICKSON</LinkStyle>
+              </NextLink>
+              <NextLink href="/contact" onClick={toggle}>
+                <LinkStyle>DR. KEITH DICKSON</LinkStyle>
+              </NextLink>
+              <NextLink href="/contact" onClick={toggle}>
+                <LinkStyle>ABOUT THE CLINIC</LinkStyle>
+              </NextLink>
+              <NextLink href="/contact" onClick={toggle}>
+                <LinkStyle>CONTACT</LinkStyle>
+              </NextLink>
+              <NextLink href="/" onClick={toggle}>
+                <LinkStyle>HOME</LinkStyle>
+              </NextLink>
             </SidebarMenu>
           </SidebarWrapper>
         </SidebarLimits>
