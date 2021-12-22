@@ -228,12 +228,12 @@ export default function Nav({
             value="2"
           >
             <ToggleLink>
-              <ALink href="/contact">
+              <ALink href="/dr-bruce-dickson">
                 <LinkStyle onClick={toggleAbout}>Dr. Keith Dickson</LinkStyle>
               </ALink>
             </ToggleLink>
             <ToggleLink>
-              <ALink href="">
+              <ALink href="/dr-bruce-dickson">
                 <LinkStyle>Dr. Bruce Dickson</LinkStyle>
               </ALink>
             </ToggleLink>
@@ -311,12 +311,12 @@ export default function Nav({
             value="2"
           >
             <ToggleLink>
-              <ALink href="/contact">
+              <ALink href="/dr-bruce-dickson">
                 <LinkStyle onClick={toggleAbout}>Dr. Keith Dickson</LinkStyle>
               </ALink>
             </ToggleLink>
             <ToggleLink>
-              <ALink href="">
+              <ALink href="dr-bruce-dickson">
                 <LinkStyle>Dr. Bruce Dickson</LinkStyle>
               </ALink>
             </ToggleLink>

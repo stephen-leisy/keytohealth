@@ -136,10 +136,10 @@ export default function Sidebar({ isOpen, toggle }) {
             <NextLink href="/treatment-three" onClick={toggle}>
               <LinkStyle>TREATMENT THREE</LinkStyle>
             </NextLink>
-            <NextLink href="/contact" onClick={toggle}>
+            <NextLink href="/dr-bruce-dickson" onClick={toggle}>
               <LinkStyle>DR. BRUCE DICKSON</LinkStyle>
             </NextLink>
-            <NextLink href="/contact" onClick={toggle}>
+            <NextLink href="/dr-bruce-dickson" onClick={toggle}>
               <LinkStyle>DR. KEITH DICKSON</LinkStyle>
             </NextLink>
             <NextLink href="/contact" onClick={toggle}>

@@ -41,7 +41,9 @@ const Layout: React.FunctionComponent<{ children: any; site: string }> = ({
       whichPage == 'contact' ||
       whichPage == 'treatment-one' ||
       whichPage == 'treatment-two' ||
-      whichPage == 'treatment-three'
+      whichPage == 'treatment-three' ||
+      whichPage == 'dr-bruce-dickson' ||
+      whichPage == 'dr-keith-dickson'
     ) {
       setTop(true);
       console.log('truth');
