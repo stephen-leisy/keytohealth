@@ -75,6 +75,7 @@ const Goods = styled.div`
   @media screen and (max-width: 414px) {
     margin-bottom: 0;
     margin-right: 0;
+    padding-top: 60px;
   }
 `;
 
