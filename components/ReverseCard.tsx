@@ -16,8 +16,8 @@ const CardWrapper = styled.div`
   border-top: black solid 3px;
 
   @media screen and (max-width: 414px) {
-    width: 180vw;
-    height: 180vw;
+    width: 100vh;
+    height: 180vh;
   }
 `;
 
@@ -60,6 +60,10 @@ const Image = styled.img`
   height: 90%;
   width: 60%;
   margin-bottom: 40px;
+
+  @media screen and (max-width: 414px) {
+    margin-bottom: 0;
+  }
 `;
 
 const Goods = styled.div`
@@ -67,6 +71,11 @@ const Goods = styled.div`
   height: 70vh;
   margin-bottom: 40px;
   margin-right: 20px;
+
+  @media screen and (max-width: 414px) {
+    margin-bottom: 0;
+    margin-right: 0;
+  }
 `;
 
 const CardText = styled.p`

@@ -15,8 +15,8 @@ const Wrapper = styled.main`
     height: 190vh;
   }
   @media screen and (max-width: 414px) {
-    width: 180vw;
-    height: 350vw;
+    width: 100vh;
+    height: 200vh;
   }
 
   /* background-color: ${({ theme }) => theme.colors.lcream}; */
