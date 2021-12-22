@@ -76,6 +76,8 @@ const Goods = styled.div`
     margin-bottom: 0;
     margin-right: 0;
     padding-top: 60px;
+    height: 50vh;
+    border: red 3px solid;
   }
 `;
 
