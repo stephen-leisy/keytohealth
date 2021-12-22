@@ -22,6 +22,11 @@ const FooterSocial = styled.div`
   font-weight: bold;
   padding-top: 0px;
   color: ${({ theme }) => theme.colors.cream};
+
+  @media screen and (max-width: 500px) {
+    width: 100%;
+    padding-left: 40px;
+  }
 `;
 
 const FooterContact = styled.div`
@@ -30,6 +35,12 @@ const FooterContact = styled.div`
   justify-content: center;
   height: 50%;
   width: 100%;
+
+  @media screen and (max-width: 500px) {
+    flex-direction: column;
+    align-items: flex-start;
+    padding-left: 40px;
+  }
 `;
 
 const ContactInfo = styled.p`
@@ -39,6 +50,7 @@ const ContactInfo = styled.p`
 
 const ContactPhone = styled.a`
   color: #fff;
+  padding: 10px;
   &:hover {
     text-decoration: underline;
   }

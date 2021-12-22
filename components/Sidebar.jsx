@@ -19,6 +19,10 @@ const SidebarLimits = styled.main`
   right: ${({ isOpen }) => (isOpen ? '0' : '-100%')};
   overflow-x: visible;
   border-left: solid black 5px;
+
+  @media screen and (max-width: 500px) {
+    width: 70vh;
+  }
 `;
 
 const Icon = styled.div`
@@ -48,8 +52,8 @@ const SidebarMenu = styled.ul`
   grid-template-rows: repeat(8, 60px);
   text-align: center;
 
-  @media screen and (max-width: 480px) {
-    grid-template-rows: repeat(5, 60px);
+  @media screen and (max-width: 500px) {
+    grid-template-rows: repeat(8, 80px);
   }
 `;
 
@@ -105,6 +109,10 @@ const LinkStyle = styled.a`
     color: ${({ theme }) => theme.colors.green};
     -webkit-text-stroke: 0.5px black;
     text-decoration: underline;
+  }
+
+  @media screen and (max-width: 500px) {
+    font-size: 2.1rem;
   }
 `;
 
