@@ -59,6 +59,10 @@ const Image = styled.img`
   height: 90%;
   width: 60%;
   margin-bottom: 40px;
+
+  @media screen and (max-width: 414px) {
+    margin-bottom: 0;
+  }
 `;
 
 const Goods = styled.div`
@@ -66,6 +70,14 @@ const Goods = styled.div`
   height: 70vh;
   margin-bottom: 40px;
   margin-left: 20px;
+
+  @media screen and (max-width: 414px) {
+    margin-bottom: 0;
+    margin-right: 0;
+    padding-top: 60px;
+    height: 50vh;
+    width: 80%;
+  }
 `;
 
 const CardText = styled.p`
