@@ -8,12 +8,12 @@ const CardWrapper = styled.div`
   width: 100%;
   display: flex;
   justify-content: center;
-  background-color: ${({ theme }) => theme.colors.green};
-  /* background-color: #000; */
+  /* background-color: ${({ theme }) => theme.colors.green}; */
+  background-color: #f5f5f5;
   display: flex;
   align-items: center;
   justify-content: center;
-  border-top: black solid 3px;
+  /* border-top: black solid 3px; */
 
   @media screen and (max-width: 414px) {
     width: 100vh;
@@ -24,6 +24,14 @@ const CardWrapper = styled.div`
 const Border = styled.div`
   height: 80%;
   width: 80%;
+  -moz-box-shadow: 0 0 10px #000;
+  -webkit-box-shadow: 0 0 10px #000;
+  box-shadow: 0 0 10px #000;
+  padding: 10px;
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
   margin-top: 10%;
 `;
@@ -39,7 +47,7 @@ const CardHeader = styled.h2`
   height: 7vh;
   font-size: 3rem;
   font-weight: bold;
-  color: #fff;
+  /* color: #fff; */
 
   /* padding-top: 80px; */
 `;
@@ -64,6 +72,11 @@ const Image = styled.img`
   @media screen and (max-width: 414px) {
     margin-bottom: 0;
   }
+
+  @media screen and (max-width: 1200px) {
+    height: 80vh;
+    width: 80vh;
+  }
 `;
 
 const Goods = styled.div`
@@ -78,7 +91,6 @@ const Goods = styled.div`
     padding-top: 60px;
     height: 50vh;
     width: 80%;
-    
   }
 `;
 

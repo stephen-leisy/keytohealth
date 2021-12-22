@@ -10,6 +10,7 @@ const FooterWrapper = styled.div`
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  margin-top: 30px;
 
   @media screen and (max-width: 414px) {
     width: 100vh;

@@ -9,11 +9,11 @@ const CardWrapper = styled.div`
   display: flex;
   justify-content: center;
   /* background-color: ${({ theme }) => theme.colors.cream}; */
-  background-color: #fff;
+  background-color: #f5f5f5;
   display: flex;
   align-items: center;
   justify-content: center;
-  border-top: black solid 3px;
+  /* border-top: black solid 3px; */
 
   @media screen and (max-width: 414px) {
     width: 100vh;
@@ -24,6 +24,14 @@ const CardWrapper = styled.div`
 const Border = styled.div`
   height: 80%;
   width: 80%;
+  -moz-box-shadow: 0 0 10px #000;
+  -webkit-box-shadow: 0 0 10px #000;
+  box-shadow: 0 0 10px #000;
+  padding: 10px;
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
   margin-top: 10%;
 `;
@@ -33,12 +41,25 @@ const HeaderBorder = styled.div`
   display: flex;
   align-items: center;
   justify-content: flex-start;
+
+  @media screen and (max-width: 1200px) {
+    justify-content: center;
+
+    width: 100%;
+  }
 `;
 
 const CardHeader = styled.h2`
   height: 7vh;
+  width: 100%;
   font-size: 3rem;
   font-weight: bold;
+
+  @media screen and (max-width: 1200px) {
+    height: 100%;
+    width: 80%;
+    padding: 0px;
+  }
 
   /* padding-top: 80px; */
 `;
@@ -60,6 +81,11 @@ const Image = styled.img`
   width: 60%;
   margin-bottom: 40px;
 
+  @media screen and (max-width: 1200px) {
+    height: 80vh;
+    width: 80vh;
+  }
+
   @media screen and (max-width: 414px) {
     margin-bottom: 0;
   }
@@ -70,6 +96,13 @@ const Goods = styled.div`
   height: 70vh;
   margin-bottom: 40px;
   margin-left: 20px;
+
+  @media screen and (max-width: 1200px) {
+    width: 100%;
+    /* height: 70vh; */
+    margin-bottom: 0px;
+    margin-left: 0px;
+  }
 
   @media screen and (max-width: 414px) {
     margin-bottom: 0;
@@ -82,6 +115,24 @@ const Goods = styled.div`
 
 const CardText = styled.p`
   height: 70%;
+`;
+
+const ShadowBox = styled.div`
+  -moz-box-shadow: 0 0 10px #000;
+  -webkit-box-shadow: 0 0 10px #000;
+  box-shadow: 0 0 10px #000;
+
+  @media screen and (max-width: 950px) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 90%;
+  }
+
+  @media screen and (max-width: 414px) {
+    width: 90%;
+  }
 `;
 
 export default function Card({ title, id, image }) {
