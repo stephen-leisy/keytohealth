@@ -140,7 +140,7 @@ export default function Welcome() {
         <CardPlaceing>
           <FadeIn transitionDuration={2000}>
             <WelcomeCard>
-              <Header>UNLOCK YOUR HEALTH'S FULL POTENTIAL</Header>
+              <Header>UNLOCK YOUR HEALTHS FULL POTENTIAL</Header>
               <About>
                 Offering non-invasive, natural therapies based on traditional,
                 time tested methods blended with the most recent medical
