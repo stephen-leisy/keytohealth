@@ -277,19 +277,21 @@ export default function Nav({
             onMouseLeave={onMouseLeave}
           >
             <ToggleLink onMouseLeave={onMouseLeave}>
-              <BLink to="article1" onClick={toggleTreatments}>
-                Treatment 1
-              </BLink>
+              <ALink href="/treatment-one">
+                <LinkStyle onClick={toggleTreatments}>Treatment One</LinkStyle>
+              </ALink>
             </ToggleLink>
             <ToggleLink>
-              <BLink to="article2" onClick={toggleTreatments}>
-                Treatment 2
-              </BLink>
+              <ALink href="/treatment-two">
+                <LinkStyle onClick={toggleTreatments}>Treatment Two</LinkStyle>
+              </ALink>
             </ToggleLink>
             <ToggleLink>
-              <BLink to="article3" onClick={toggleTreatments}>
-                Treatment 3
-              </BLink>
+              <ALink href="/treatment-three">
+                <LinkStyle onClick={toggleTreatments}>
+                  Treatment Three
+                </LinkStyle>
+              </ALink>
             </ToggleLink>
           </ToggleGroup>
         </NavToggle>

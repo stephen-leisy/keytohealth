@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import Contact from '../components/Contact';
 
 const Main = styled.main`
   height: 110vh;
@@ -6,7 +7,8 @@ const Main = styled.main`
   background-color: #f5f5f5;
 
   @media screen and (max-width: 1280px) {
-    height: 200vh;
+    height: 1600px;
+    /* width: 100vh; */
   }
 `;
 
@@ -35,6 +37,9 @@ const ContactSectionWrapper = styled.div`
 
   @media screen and (max-width: 1280px) {
     flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+    width: 100%;
   }
 `;
 
@@ -56,19 +61,12 @@ const ContactContentRight = styled.div`
   align-items: flex-start;
   justify-content: center;
   flex-direction: column;
-`;
 
-const ContactHeader = styled.h1`
-  font-family: 'Abril Fatface', cursive;
-  color: ${({ theme }) => theme.colors.green};
+  @media screen and (max-width: 1280px) {
+    /* justify-content: flex-start; */
+    /* width: 60%; */
+  }
 `;
-
-const SubHeader = styled.h2`
-  font-family: 'Abril Fatface', cursive;
-  color: ${({ theme }) => theme.colors.brown};
-`;
-
-const ContactInfo = styled.p``;
 
 const MapWrapper = styled.div`
   /* padding-top: 40px; */
@@ -89,8 +87,8 @@ const contact = () => {
             <MapWrapper>
               <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2810.862874368643!2d-123.20074524908615!3d45.21011027899621!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x549548ddc025ac4b%3A0x8464c7695af0c6dd!2s119%20NE%203rd%20St%2C%20McMinnville%2C%20OR%2097128!5e0!3m2!1sen!2sus!4v1640117300088!5m2!1sen!2sus"
-                width="600"
-                height="450"
+                width="500vh"
+                height="500vh"
                 // style="border:0"
                 // allowfullscreen=""
                 loading="lazy"
@@ -98,16 +96,7 @@ const contact = () => {
             </MapWrapper>
           </ContactContentLeft>
           <ContactContentRight>
-            <ContactHeader>Schedule an Appointment</ContactHeader>
-            <SubHeader>Office Hours</SubHeader>
-            <ContactInfo>Mon-Thurs: 8am - 5pm</ContactInfo>
-            <ContactInfo>Sat-Sun: Closed</ContactInfo>
-            <SubHeader>Contact Info</SubHeader>
-            <ContactInfo>Phone: (503) 434-6515</ContactInfo>
-            <SubHeader>Address</SubHeader>
-            <ContactInfo>119 NE 3rd St</ContactInfo>
-            <ContactInfo>McMinnville, OR 97128</ContactInfo>
-            <ContactInfo>United States</ContactInfo>
+            <Contact />
           </ContactContentRight>
         </ContactSectionWrapper>
       </ContactWrapper>

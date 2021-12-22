@@ -7,7 +7,7 @@ const ContainerHeader = styled.div`
   position: fixed;
   margin-top: ${({ top }) => (top ? '0px' : '80px')};
   height: ${({ treatmentList, aboutList }) =>
-    treatmentList || aboutList ? '20vh' : '10vh'};
+    treatmentList || aboutList ? '15vh' : '10vh'};
 
   width: 100%;
   background: ${({ top, theme }) =>
@@ -29,7 +29,7 @@ const ContainerHeader = styled.div`
 
   @media screen and (max-height: 1000px) {
     height: ${({ treatmentList, aboutList }) =>
-      treatmentList || aboutList ? '250px' : '100px'};
+      treatmentList || aboutList ? '200px' : '100px'};
   }
 `;
 

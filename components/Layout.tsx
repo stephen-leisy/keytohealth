@@ -36,7 +36,13 @@ const Layout: React.FunctionComponent<{ children: any; site: string }> = ({
   let page = site.split('/')[3];
 
   const scrollHeader = (scrollY) => {
-    if (scrollY > 20 || whichPage == 'contact') {
+    if (
+      scrollY > 20 ||
+      whichPage == 'contact' ||
+      whichPage == 'treatment-one' ||
+      whichPage == 'treatment-two' ||
+      whichPage == 'treatment-three'
+    ) {
       setTop(true);
       console.log('truth');
     } else {
