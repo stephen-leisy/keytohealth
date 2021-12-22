@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import Contact from '../components/Contact';
 
 const FooterWrapper = styled.div`
-  background-color: #000;
+  background-color: ${({ theme }) => theme.colors.green};
   height: 20vw;
   width: 100vw;
   display: flex;
@@ -22,7 +22,7 @@ const FooterSocial = styled.div`
   font-size: 3rem;
   font-weight: bold;
   padding-top: 0px;
-  color: ${({ theme }) => theme.colors.cream};
+  color: ${({ theme }) => theme.colors.gold};
 
   @media screen and (max-width: 500px) {
     width: 100%;

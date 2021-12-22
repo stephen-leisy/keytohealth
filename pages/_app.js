@@ -26,8 +26,9 @@ const theme = {
     lbrown: '#eda268',
     cream: '#ffd1ad',
     lcream: '#ffdcc2',
-    green: '#245501',
-    gold: '#D4AF37'
+    green: '#2b3618',
+    // green: '#245501',
+    gold: '#D4AF37',
   },
 };
 

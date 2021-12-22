@@ -6,7 +6,7 @@ const CardWrapper = styled.div`
   width: 100%;
 
   /* background-color: ${({ theme }) => theme.colors.cream}; */
-  background-color: #fff;
+  background-color: #f5f5f5;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -31,6 +31,7 @@ const ShadowBox = styled.div`
   box-shadow: 0 0 10px #000;
   margin-top: 100px;
   width: 850px;
+  background-color: #fff;
 
   @media screen and (max-width: 950px) {
     display: flex;
