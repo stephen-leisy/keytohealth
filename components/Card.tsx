@@ -16,8 +16,8 @@ const CardWrapper = styled.div`
   border-top: black solid 3px;
 
   @media screen and (max-width: 414px) {
-    width: 100vh;
-    height: 180vh;
+    width: 180vw;
+    height: 180vw;
   }
 `;
 

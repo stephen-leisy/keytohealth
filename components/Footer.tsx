@@ -12,8 +12,8 @@ const FooterWrapper = styled.div`
   flex-direction: column;
 
   @media screen and (max-width: 414px) {
-    width: 100vh;
-    height: 140vh;
+    width: 180vw;
+    height: 140vw;
   }
 `;
 
