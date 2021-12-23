@@ -4,7 +4,7 @@ import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
 
 const CardWrapper = styled.div`
-  height: 110vh;
+  height: 100vh;
   width: 100%;
   display: flex;
   justify-content: center;
@@ -22,7 +22,7 @@ const CardWrapper = styled.div`
 `;
 
 const Border = styled.div`
-  height: 80%;
+  height: 100%;
   width: 80%;
   -moz-box-shadow: 0 0 10px #000;
   -webkit-box-shadow: 0 0 10px #000;
@@ -33,17 +33,28 @@ const Border = styled.div`
   justify-content: center;
   align-items: center;
 
-  margin-top: 10%;
+  margin-top: 20px;
+
+  @media screen and (max-width: 1000px) {
+    padding: 20px;
+  }
+
+  @media screen and (max-width: 414px) {
+    padding: 0px;
+    margin-top: 0px;
+    height: 100%;
+  }
 `;
 
 const HeaderBorder = styled.div`
   width: 100%;
+  height: 30%;
   display: flex;
   align-items: center;
   justify-content: flex-start;
 
   @media screen and (max-width: 1200px) {
-    justify-content: center;
+    /* justify-content: center; */
 
     width: 100%;
   }
@@ -54,6 +65,8 @@ const CardHeader = styled.h2`
   width: 100%;
   font-size: 3rem;
   font-weight: bold;
+  color: ${({ theme }) => theme.colors.green};
+  -webkit-text-stroke: 0.5px black;
 
   @media screen and (max-width: 1200px) {
     height: 100%;
@@ -74,17 +87,31 @@ const MeatBorder = styled.div`
   @media screen and (max-width: 1200px) {
     flex-direction: column-reverse;
   }
+
+  /* @media screen and (max-width: 414px) {
+    height: 200vh;
+  } */
 `;
 
 const Image = styled.img`
-  height: 90%;
-  width: 60%;
-  margin-bottom: 40px;
+  height: 80%;
+  width: 50%;
+  /* margin-bottom: 40px; */
 
   @media screen and (max-width: 1200px) {
     height: 80vh;
     width: 80vh;
   }
+
+  @media screen and (max-width: 1000px) {
+    height: 160%;
+    width: 100%;
+  }
+
+  /* @media screen and (max-width: 550px) {
+    height: 50vh;
+    width: 50vh;
+  } */
 
   @media screen and (max-width: 414px) {
     margin-bottom: 0;
@@ -94,11 +121,11 @@ const Image = styled.img`
 const Goods = styled.div`
   width: 40%;
   height: 70vh;
-  margin-bottom: 40px;
+  margin-top: 30px;
   margin-left: 20px;
 
   @media screen and (max-width: 1200px) {
-    width: 100%;
+    width: 90%;
     /* height: 70vh; */
     margin-bottom: 0px;
     margin-left: 0px;
@@ -107,14 +134,14 @@ const Goods = styled.div`
   @media screen and (max-width: 414px) {
     margin-bottom: 0;
     margin-right: 0;
-    padding-top: 60px;
-    height: 50vh;
+    /* padding-top: 60px; */
+    height: 100%;
     width: 80%;
   }
 `;
 
 const CardText = styled.p`
-  height: 70%;
+  /* height: 70%; */
 `;
 
 const ShadowBox = styled.div`
@@ -135,7 +162,15 @@ const ShadowBox = styled.div`
   }
 `;
 
-export default function Card({ title, id, image }) {
+export default function Card({
+  title,
+  id,
+  image,
+  text,
+  moreText,
+  textThree,
+  textFour,
+}) {
   return (
     // const { observe, unobserve, inView, scrollDirection, entry } = useInView({
     //   threshold: 0.25, // Default is 0
@@ -163,7 +198,10 @@ export default function Card({ title, id, image }) {
             <HeaderBorder>
               <CardHeader>{title}</CardHeader>
             </HeaderBorder>
-            <CardText></CardText>
+            <CardText>{text}</CardText>
+            <CardText>{moreText}</CardText>
+            <CardText>{textThree}</CardText>
+            <CardText>{textFour}</CardText>
           </Goods>
         </MeatBorder>
       </Border>

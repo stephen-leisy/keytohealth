@@ -39,11 +39,19 @@ export default function Home() {
       <Sidebar isOpen={isOpen} toggle={toggle} />
 
       <Card
-        title={'Treatment One'}
+        title={'Advance Allergy Therapeutics'}
         id={'article1'}
         image={
           'https://i0.wp.com/post.healthline.com/wp-content/uploads/2019/01/How-to-Be-Happy_1296x728-header-1024x575.jpg?w=1155&h=1528'
         }
+        text={
+          'AAT or Advanced Allergy Therapeutics offers a highly effective and unique approach to treating several health conditions and symptoms associated with sensitivities and allergies. In fact, AAT is a precision-based therapy that treats the organ system involved in reactive behavior. Albeit this doesnt treat the immune system instead focuses on the relationship between organ systems and symptoms in order to produce long-term and rapid results.'
+        }
+        moreText={
+          'In McMinnville, Advanced Allergy Therapeutics emerges in the 21st century. It is a science with 3000 years old traditional acupuncture principles offering effective treatment of symptoms associated with sensitivities and allergies.'
+        }
+        textThree={'No avoidance'}
+        textFour={'No herbal remedies'}
       />
       <ReverseCard
         title={'Treatment Two'}

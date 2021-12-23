@@ -33,7 +33,7 @@ const Border = styled.div`
   justify-content: center;
   align-items: center;
 
-  margin-top: 10%;
+  margin-top: 10px;
 `;
 
 const HeaderBorder = styled.div`
@@ -65,9 +65,8 @@ const MeatBorder = styled.div`
 `;
 
 const Image = styled.img`
-  height: 90%;
-  width: 60%;
-  margin-bottom: 40px;
+  height: 80%;
+  width: 50%;
 
   @media screen and (max-width: 414px) {
     margin-bottom: 0;

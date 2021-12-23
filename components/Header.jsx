@@ -59,12 +59,13 @@ const MobileIcon = styled.div`
     transform: translate(-100%, 60%);
     font-size: 2rem;
     cursor: pointer;
+    padding: 3px;
 
     background: transparent;
   }
 
   @media screen and (max-width: 414px) {
-    padding-top: 15px;
+    padding-top: 5px;
   }
 `;
 
