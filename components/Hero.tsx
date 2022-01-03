@@ -70,6 +70,7 @@ const CardPlaceing = styled.div`
 
   @media screen and (max-width: 414px) {
     align-items: flex-end;
+    height: 60%;
   }
 `;
 
@@ -87,9 +88,9 @@ const WelcomeCard = styled.div`
 
   @media screen and (max-width: 414px) {
     width: 100%;
-    height: 90vh;
+    height: 40vh;
     border-top: black 1px solid;
-    border-bottom: none;
+    /* border-bottom: none; */
   }
 
   /* @media screen and (max-height: 900px) {
