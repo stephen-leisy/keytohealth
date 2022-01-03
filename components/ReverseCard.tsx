@@ -20,7 +20,7 @@ const CardWrapper = styled.div`
 
   @media screen and (max-width: 414px) {
     width: 100vh;
-    height: 160vh;
+    height: 140vh;
   }
 `;
 
@@ -119,7 +119,7 @@ const Image = styled.img`
   } */
 
   @media screen and (max-width: 414px) {
-    margin-bottom: 0;
+    max-width: 80vh;
   }
 `;
 

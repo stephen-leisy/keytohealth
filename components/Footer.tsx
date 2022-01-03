@@ -4,6 +4,7 @@ import Contact from '../components/Contact';
 
 const FooterWrapper = styled.div`
   background-color: ${({ theme }) => theme.colors.green};
+
   height: 20vw;
   width: 100vw;
   display: flex;
@@ -11,6 +12,12 @@ const FooterWrapper = styled.div`
   align-items: center;
   flex-direction: column;
   margin-top: 30px;
+  /* background-image: url(${'https://cdn8.dissolve.com/p/D2115_231_516/D2115_231_516_1200.jpg'});
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-attachment: fixed; */
 
   @media screen and (max-width: 414px) {
     width: 100vh;
