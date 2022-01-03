@@ -4,7 +4,7 @@ import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
 
 const CardWrapper = styled.div`
-  height: 110vh;
+  height: 100vh;
   width: 100%;
   display: flex;
   justify-content: center;
@@ -14,16 +14,19 @@ const CardWrapper = styled.div`
   align-items: center;
   justify-content: center;
   /* border-top: black solid 3px; */
+  @media screen and (max-width: 1200px) {
+    height: 130vh;
+  }
 
   @media screen and (max-width: 414px) {
     width: 100vh;
-    height: 180vh;
+    height: 160vh;
   }
 `;
 
 const Border = styled.div`
-  height: 80%;
-  width: 80%;
+  height: 90%;
+  width: 90%;
   -moz-box-shadow: 0 0 10px #000;
   -webkit-box-shadow: 0 0 10px #000;
   box-shadow: 0 0 10px #000;
@@ -38,16 +41,32 @@ const Border = styled.div`
 
 const HeaderBorder = styled.div`
   width: 100%;
+  height: 30%;
   display: flex;
   align-items: center;
-  justify-content: flex-end;
+  justify-content: flex-start;
+
+  @media screen and (max-width: 1200px) {
+    justify-content: center;
+  }
 `;
 
 const CardHeader = styled.h2`
   height: 7vh;
-  font-size: 3rem;
+  width: 100%;
+  font-size: 5vh;
   font-weight: bold;
-  /* color: #fff; */
+  color: ${({ theme }) => theme.colors.gold};
+  -webkit-text-stroke: 0.75px black;
+
+  text-align: right;
+
+  @media screen and (max-width: 1200px) {
+    height: 100%;
+    width: 80%;
+    padding: 0px;
+    text-align: center;
+  }
 
   /* padding-top: 80px; */
 `;
@@ -62,39 +81,77 @@ const MeatBorder = styled.div`
   @media screen and (max-width: 1200px) {
     flex-direction: column;
   }
+
+  /* @media screen and (max-width: 414px) {
+    height: 200vh;
+  } */
+`;
+
+const ImageWrapper = styled.div`
+  /* margin: 0 auto; */
+  height: 80%;
+  display: flex;
+  justify-content: center;
 `;
 
 const Image = styled.img`
-  height: 80%;
-  width: 50%;
+  max-width: 100%;
+  height: auto;
+  background-size: cover;
+  -moz-box-shadow: 0 0 10px #000;
+  -webkit-box-shadow: 0 0 10px #000;
+  box-shadow: 0 0 10px #000;
+  /* margin-bottom: 40px; */
+
+  @media screen and (max-width: 1200px) {
+    /* height: 80vh;
+    width: 80vh; */
+  }
+
+  @media screen and (max-width: 1000px) {
+    /* height: 160%;
+    width: 100%; */
+  }
+
+  /* @media screen and (max-width: 550px) {
+    height: 50vh;
+    width: 50vh;
+  } */
 
   @media screen and (max-width: 414px) {
     margin-bottom: 0;
-  }
-
-  @media screen and (max-width: 1200px) {
-    height: 80vh;
-    width: 80vh;
   }
 `;
 
 const Goods = styled.div`
   width: 40%;
   height: 70vh;
-  margin-bottom: 40px;
-  margin-right: 20px;
+  /* margin-top: 30px; */
+  margin-left: 30px;
+  margin-right: 15px;
+
+  @media screen and (max-width: 1200px) {
+    width: 90%;
+    /* height: 70vh; */
+    margin-bottom: 0px;
+    margin-left: 0px;
+  }
 
   @media screen and (max-width: 414px) {
     margin-bottom: 0;
     margin-right: 0;
-    padding-top: 60px;
-    height: 50vh;
+    /* padding-top: 60px; */
+    height: 100%;
     width: 80%;
   }
 `;
 
 const CardText = styled.p`
-  height: 70%;
+  font-size: 2vh;
+
+  @media screen and (max-width: 1200px) {
+    text-align: center;
+  }
 `;
 
 export default function Card({ title, id, image }) {
@@ -108,7 +165,9 @@ export default function Card({ title, id, image }) {
             </HeaderBorder>
             <CardText></CardText>
           </Goods>
-          <Image src={image}></Image>
+          <ImageWrapper>
+            <Image src={image}></Image>
+          </ImageWrapper>
         </MeatBorder>
       </Border>
     </CardWrapper>

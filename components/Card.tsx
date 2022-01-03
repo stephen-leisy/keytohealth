@@ -8,13 +8,14 @@ const CardWrapper = styled.div`
   width: 100%;
   display: flex;
   justify-content: center;
-  /* background-color: ${({ theme }) => theme.colors.cream}; */
   background-color: #f5f5f5;
   display: flex;
   align-items: center;
   justify-content: center;
-  /* border-top: black solid 3px; */
 
+  @media screen and (max-width: 1200px) {
+    height: 130vh;
+  }
   @media screen and (max-width: 414px) {
     width: 100vh;
     height: 160vh;
@@ -22,8 +23,8 @@ const CardWrapper = styled.div`
 `;
 
 const Border = styled.div`
-  height: 100%;
-  width: 80%;
+  height: 90%;
+  width: 90%;
   -moz-box-shadow: 0 0 10px #000;
   -webkit-box-shadow: 0 0 10px #000;
   box-shadow: 0 0 10px #000;
@@ -54,24 +55,23 @@ const HeaderBorder = styled.div`
   justify-content: flex-start;
 
   @media screen and (max-width: 1200px) {
-    /* justify-content: center; */
-
-    width: 100%;
+    justify-content: center;
   }
 `;
 
 const CardHeader = styled.h2`
   height: 7vh;
   width: 100%;
-  font-size: 3rem;
+  font-size: 5vh;
   font-weight: bold;
-  color: ${({ theme }) => theme.colors.green};
-  -webkit-text-stroke: 0.5px black;
+  color: ${({ theme }) => theme.colors.gold};
+  -webkit-text-stroke: 0.75px black;
 
   @media screen and (max-width: 1200px) {
     height: 100%;
     width: 80%;
     padding: 0px;
+    text-align: center;
   }
 
   /* padding-top: 80px; */
@@ -93,19 +93,30 @@ const MeatBorder = styled.div`
   } */
 `;
 
-const Image = styled.img`
+const ImageWrapper = styled.div`
+  /* margin: 0 auto; */
   height: 80%;
-  width: 50%;
+  display: flex;
+  justify-content: center;
+`;
+
+const Image = styled.img`
+  max-width: 800px;
+  height: auto;
+  background-size: cover;
+  -moz-box-shadow: 0 0 10px #000;
+  -webkit-box-shadow: 0 0 10px #000;
+  box-shadow: 0 0 10px #000;
   /* margin-bottom: 40px; */
 
   @media screen and (max-width: 1200px) {
-    height: 80vh;
-    width: 80vh;
+    /* height: 80vh;
+    width: 80vh; */
   }
 
   @media screen and (max-width: 1000px) {
-    height: 160%;
-    width: 100%;
+    /* height: 160%;
+    width: 100%; */
   }
 
   /* @media screen and (max-width: 550px) {
@@ -121,8 +132,9 @@ const Image = styled.img`
 const Goods = styled.div`
   width: 40%;
   height: 70vh;
-  margin-top: 30px;
-  margin-left: 20px;
+  /* margin-top: 30px; */
+  margin-left: 30px;
+  margin-right: 15px;
 
   @media screen and (max-width: 1200px) {
     width: 90%;
@@ -141,7 +153,11 @@ const Goods = styled.div`
 `;
 
 const CardText = styled.p`
-  /* height: 70%; */
+  font-size: 2vh;
+
+  @media screen and (max-width: 1200px) {
+    text-align: center;
+  }
 `;
 
 const ShadowBox = styled.div`
@@ -193,7 +209,9 @@ export default function Card({
     <CardWrapper id={id}>
       <Border>
         <MeatBorder>
-          <Image src={image}></Image>
+          <ImageWrapper>
+            <Image src={image}></Image>
+          </ImageWrapper>
           <Goods>
             <HeaderBorder>
               <CardHeader>{title}</CardHeader>

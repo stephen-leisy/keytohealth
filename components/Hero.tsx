@@ -19,6 +19,10 @@ const Wrapper = styled.main`
     height: 200vh;
   }
 
+  @media screen and (max-height: 400px) {
+    height: 800px;
+  }
+
   /* background-color: ${({ theme }) => theme.colors.lcream}; */
 `;
 
@@ -45,7 +49,11 @@ const BackImage = styled.div`
   @media screen and (max-height: 600px) {
     height: 200vh;
     width: 100%;
-  } ;
+  }
+
+  @media screen and (max-height: 400px) {
+    height: 800px;
+  }
 `;
 
 const CardPlaceing = styled.div`
@@ -66,8 +74,8 @@ const CardPlaceing = styled.div`
 `;
 
 const WelcomeCard = styled.div`
-  width: 80vh;
-  height: 40vh;
+  width: 600px;
+  height: 400px;
   position: relative;
   /* background: rgba(255, 209, 173, 0.5); */
   background: rgba(245, 245, 245, 0.5);
@@ -76,11 +84,6 @@ const WelcomeCard = styled.div`
   align-items: center;
   flex-direction: column;
   border: black 1px solid;
-
-  @media screen and (max-height: 600px) {
-    width: 100%;
-    height: 80vh;
-  }
 
   @media screen and (max-width: 414px) {
     width: 100%;
@@ -132,6 +135,9 @@ const ContactButton = styled.button`
     color: ${({ theme }) => theme.colors.green};
     font-size: 1.1rem;
     -webkit-text-stroke: 0.75px black;
+  }
+
+  @media screen and (max-height: 500px) {
   }
 `;
 
