@@ -8,7 +8,7 @@ const PageWrapper = styled.main`
 `;
 
 const CardWrapper = styled.div`
-  padding: 110px;
+  padding-top: 110px;
 `;
 
 export default function treatmentTwo() {
