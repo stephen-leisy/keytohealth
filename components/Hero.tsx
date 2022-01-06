@@ -130,7 +130,7 @@ const ContactButton = styled.button`
   font-size: 1rem;
   border: ${({ theme }) => theme.colors.mandarin} 5px solid;
   border-radius: 10px;
-
+  background-color: #f5f5f5;
   color: ${({ theme }) => theme.colors.mandarin};
 
   &:hover {

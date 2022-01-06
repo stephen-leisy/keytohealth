@@ -41,7 +41,7 @@ export default function Home() {
       <Card
         title={'Advance Allergy Therapeutics'}
         id={'article1'}
-        image={'http://placekitten.com/350/350'}
+        image={'http://placekitten.com/600/500'}
         text={
           'AAT or Advanced Allergy Therapeutics offers a highly effective and unique approach to treating several health conditions and symptoms associated with sensitivities and allergies. In fact, AAT is a precision-based therapy that treats the organ system involved in reactive behavior. Albeit this doesnt treat the immune system instead focuses on the relationship between organ systems and symptoms in order to produce long-term and rapid results.'
         }
@@ -54,12 +54,12 @@ export default function Home() {
       <ReverseCard
         title={'Treatment Two'}
         id={'article2'}
-        image={'http://placekitten.com/200/450'}
+        image={'http://placekitten.com/600/500'}
       />
       <Card
         title={'Treatment Three'}
         id={'article3'}
-        image={'http://placekitten.com/300/400'}
+        image={'http://placekitten.com/600/500'}
         text={''}
         moreText={''}
         textThree={''}

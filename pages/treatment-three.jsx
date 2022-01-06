@@ -18,7 +18,7 @@ export default function treatmentThree() {
         <Card
           title={'Treatment Three'}
           id={'article3'}
-          image={'http://placekitten.com/300/400'}
+          image={'http://placekitten.com/600/500'}
         />
       </CardWrapper>
     </PageWrapper>

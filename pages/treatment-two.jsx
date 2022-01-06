@@ -18,7 +18,7 @@ export default function treatmentTwo() {
         <Card
           title={'Advance Allergy Therapeutics'}
           id={'article2'}
-          image={'http://placekitten.com/300/400'}
+          image={'http://placekitten.com/600/500'}
           text={
             'AAT or Advanced Allergy Therapeutics offers a highly effective and unique approach to treating several health conditions and symptoms associated with sensitivities and allergies. In fact, AAT is a precision-based therapy that treats the organ system involved in reactive behavior. Albeit this doesnt treat the immune system instead focuses on the relationship between organ systems and symptoms in order to produce long-term and rapid results.'
           }

@@ -48,7 +48,7 @@ const ToggleHeader = styled.li`
   &:hover {
     transition: all 0.2s ease-in-out;
     color: ${({ theme }) => theme.colors.mandarin};
-    -webkit-text-stroke: 0.5px black;
+    /* -webkit-text-stroke: 0.5px black; */
     /* ${setTreatmentList(true)} */
   }
 `;
@@ -70,9 +70,9 @@ const ToggleGroup = styled.ul`
   display: ${({ treatmentList, aboutList }) =>
     treatmentList || aboutList ? 'flex' : 'none'};
 
-  animation: ${(props) => (props.out ? fadeOut : fadeIn)} 1s linear;
+  animation: ${(props) => (props.out ? fadeOut : fadeIn)} 0.3s linear;
   transition: visibility 0.5s linear;
-  transition: 0.9s ease-in-out;
+  transition: 0.5s ease-in-out;
   align-items: center;
   justify-content: center;
   flex-direction: column;
@@ -87,7 +87,7 @@ const ToggleGroup = styled.ul`
   /* border: solid black 3px; */
   padding: 0px;
   font-size: 1.3rem;
-  background-color: ${({ theme }) => theme.colors.magnolia};
+  background: rgba(237, 230, 242, 0.9);
 `;
 
 const ToggleLink = styled.li`
@@ -130,7 +130,7 @@ const BLink = styled(ScrollLink)`
   &:hover {
     transition: all 0.2s ease-in-out;
     color: ${({ theme }) => theme.colors.mandarin};
-    -webkit-text-stroke: 0.5px black;
+    /* -webkit-text-stroke: 0.5px black; */
     text-decoration: underline;
   }
 `;
@@ -146,7 +146,7 @@ const LinkStyle = styled.a`
   &:hover {
     transition: all 0.2s ease-in-out;
     color: ${({ theme }) => theme.colors.mandarin};
-    -webkit-text-stroke: 0.5px black;
+    /* -webkit-text-stroke: 0.5px black; */
     text-decoration: underline;
   }
 `;

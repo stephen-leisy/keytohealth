@@ -9,7 +9,7 @@ const CardWrapper = styled.div`
   display: flex;
   justify-content: center;
   /* background-color: ${({ theme }) => theme.colors.green}; */
-  background-color: ${({ theme }) => theme.colors.magnolia};
+  background-color: #f5f5f5;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -31,7 +31,7 @@ const Border = styled.div`
   -webkit-box-shadow: 0 0 10px #000;
   box-shadow: 0 0 10px #000;
   padding: 10px;
-  background-color: #fff;
+  background-color: ${({ theme }) => theme.colors.magnolia};
   display: flex;
   justify-content: center;
   align-items: center;
@@ -89,15 +89,15 @@ const MeatBorder = styled.div`
 
 const ImageWrapper = styled.div`
   /* margin: 0 auto; */
-  height: 80%;
+  /* height: 80%; */
   display: flex;
   justify-content: center;
 `;
 
 const Image = styled.img`
-  max-width: 100%;
+  /* max-width: 100%;
   height: auto;
-  background-size: cover;
+  background-size: cover; */
   -moz-box-shadow: 0 0 10px #000;
   -webkit-box-shadow: 0 0 10px #000;
   box-shadow: 0 0 10px #000;
