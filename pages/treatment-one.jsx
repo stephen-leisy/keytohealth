@@ -18,9 +18,7 @@ export default function treatmentOne() {
         <Card
           title={'Treatment One'}
           id={'article1'}
-          image={
-            'https://i0.wp.com/post.healthline.com/wp-content/uploads/2019/01/How-to-Be-Happy_1296x728-header-1024x575.jpg?w=1155&h=1528'
-          }
+          image={'http://placekitten.com/300/400'}
         />
       </CardWrapper>
     </PageWrapper>

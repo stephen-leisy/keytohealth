@@ -29,6 +29,11 @@ const theme = {
     green: '#2b3618',
     // green: '#245501',
     gold: '#D4AF37',
+    darkSienna: '#482728',
+    prussianBlue: '#003249',
+    skyBlueCrayola: '#84e6f8',
+    mandarin: '#ef8354',
+    magnolia: '#ede6f2',
   },
 };
 

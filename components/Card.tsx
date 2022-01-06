@@ -8,7 +8,7 @@ const CardWrapper = styled.div`
   width: 100%;
   display: flex;
   justify-content: center;
-  background-color: #f5f5f5;
+  background-color: ${({ theme }) => theme.colors.magnolia};
   display: flex;
   align-items: center;
   justify-content: center;
@@ -35,6 +35,7 @@ const Border = styled.div`
   align-items: center;
 
   margin-top: 20px;
+  /* background: linear-gradient(20deg, #cad3cf, #ece6ab); */
 
   @media screen and (max-width: 1000px) {
     padding: 20px;
@@ -64,7 +65,7 @@ const CardHeader = styled.h2`
   width: 100%;
   font-size: 5vh;
   font-weight: bold;
-  color: ${({ theme }) => theme.colors.gold};
+  color: ${({ theme }) => theme.colors.mandarin};
   -webkit-text-stroke: 0.75px black;
 
   @media screen and (max-width: 1200px) {

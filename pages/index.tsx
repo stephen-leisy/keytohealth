@@ -41,9 +41,7 @@ export default function Home() {
       <Card
         title={'Advance Allergy Therapeutics'}
         id={'article1'}
-        image={
-          'https://i0.wp.com/post.healthline.com/wp-content/uploads/2019/01/How-to-Be-Happy_1296x728-header-1024x575.jpg?w=1155&h=1528'
-        }
+        image={'http://placekitten.com/300/400'}
         text={
           'AAT or Advanced Allergy Therapeutics offers a highly effective and unique approach to treating several health conditions and symptoms associated with sensitivities and allergies. In fact, AAT is a precision-based therapy that treats the organ system involved in reactive behavior. Albeit this doesnt treat the immune system instead focuses on the relationship between organ systems and symptoms in order to produce long-term and rapid results.'
         }
@@ -56,16 +54,12 @@ export default function Home() {
       <ReverseCard
         title={'Treatment Two'}
         id={'article2'}
-        image={
-          'https://www.euractiv.com/wp-content/uploads/sites/2/2014/03/exercise_0.jpeg'
-        }
+        image={'http://placekitten.com/300/400'}
       />
       <Card
         title={'Treatment Three'}
         id={'article3'}
-        image={
-          'https://images.theconversation.com/files/423138/original/file-20210924-19-1ryf4ed.jpg?ixlib=rb-1.1.0&rect=8%2C25%2C5742%2C3802&q=20&auto=format&w=320&fit=clip&dpr=2&usm=12&cs=strip'
-        }
+        image={'http://placekitten.com/300/400'}
         text={''}
         moreText={''}
         textThree={''}

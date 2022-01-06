@@ -11,10 +11,12 @@ const ContainerHeader = styled.div`
 
   width: 100%;
   background: ${({ top, theme }) =>
-    top ? '#fff' : 'rgba(245, 245, 245, 0.9);'};
+    top ? '#fff' : 'rgba(237, 230, 242, 0.9);'};
   transition: 0.2s ease-in-out;
-  border-bottom: 5px solid black;
-  border-top: 5px solid black;
+  border-bottom: ${({ top }) =>
+    top ? '10px solid #003249' : '5px solid #003249'};
+  border-top: ${({ top }) =>
+    top ? '5px solid #003249' : '15px solid #003249'};
   padding-bottom: 0;
   margin-bottom: 0;
 
@@ -40,7 +42,8 @@ const Border = styled.div`
 
 const Logo = styled.li`
   font-family: 'Abril Fatface', cursive;
-  color: ${({ theme }) => theme.colors.green};
+  color: ${({ theme }) => theme.colors.mandarin};
+  -webkit-text-stroke: 0.5px black;
   font-size: 2.5rem;
   margin-left: 4%;
   list-style: none;

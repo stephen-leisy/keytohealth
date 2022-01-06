@@ -10,8 +10,8 @@ const RouterWrapper = styled.div`
   justify-content: flex-start;
   align-items: flex-start;
   padding-top: 20px;
-  font-family: 'Abril Fatface', cursive;
-  color: ${({ theme }) => theme.colors.gold};
+  font-family: 'Ubuntu', sans-serif;
+  color: ${({ theme }) => theme.colors.prussianBlue};
 
   @media screen and (max-width: 1200px) {
     display: none;
@@ -25,20 +25,20 @@ const NavToggle = styled.ul`
   text-align: center;
   background: transparent;
   cursor: pointer;
-  color: ${({ theme }) => theme.colors.gold};
+  color: ${({ theme }) => theme.colors.prussianBlue};
   /* display: inline; */
 `;
 
 const ToggleHeader = styled.li`
   list-style: none;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   position: relative;
   z-index: 10;
-  -webkit-text-stroke: 1px black;
+  /* -webkit-text-stroke: 1px black; */
 
   &:hover {
     transition: all 0.2s ease-in-out;
-    color: ${({ theme }) => theme.colors.green};
+    color: ${({ theme }) => theme.colors.mandarin};
     -webkit-text-stroke: 0.5px black;
     /* ${setTreatmentList(true)} */
   }
@@ -46,13 +46,13 @@ const ToggleHeader = styled.li`
 
 const ToggleTreatmentHeader = styled.li`
   list-style: none;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   position: relative;
   z-index: 10;
 
   &:hover {
     transition: all 0.2s ease-in-out;
-    color: ${({ theme }) => theme.colors.green};
+    color: ${({ theme }) => theme.colors.mandarin};
     -webkit-text-stroke: 0.5px black;
   }
 `;
@@ -89,7 +89,7 @@ const ContactHeader = styled.li`
 const ALink = styled(Link)`
   background: transparent;
   cursor: pointer;
-  color: ${({ theme }) => theme.colors.gold};
+  color: ${({ theme }) => theme.colors.prussianBlue};
 
   /* margin: 30px; */
 
@@ -102,15 +102,15 @@ const ALink = styled(Link)`
 
 const BLink = styled(ScrollLink)`
   background: transparent;
-  color: ${({ theme }) => theme.colors.gold};
+  color: ${({ theme }) => theme.colors.prussianBlue};
   /* color: black; */
   cursor: pointer;
   font-size: 1.3rem;
-  -webkit-text-stroke: 0.75px black;
+  /* -webkit-text-stroke: 0.75px black; */
 
   &:hover {
     transition: all 0.2s ease-in-out;
-    color: ${({ theme }) => theme.colors.green};
+    color: ${({ theme }) => theme.colors.mandarin};
     -webkit-text-stroke: 0.5px black;
     text-decoration: underline;
   }
@@ -119,14 +119,14 @@ const BLink = styled(ScrollLink)`
 const LinkStyle = styled.a`
   /* margin-left: 15px; */
   background: transparent;
-  color: ${({ theme }) => theme.colors.gold};
+  color: ${({ theme }) => theme.colors.prussianBlue};
   cursor: pointer;
   font-size: 1.3rem;
-  -webkit-text-stroke: 1px black;
+  /* -webkit-text-stroke: 1px black; */
 
   &:hover {
     transition: all 0.2s ease-in-out;
-    color: ${({ theme }) => theme.colors.green};
+    color: ${({ theme }) => theme.colors.mandarin};
     -webkit-text-stroke: 0.5px black;
     text-decoration: underline;
   }

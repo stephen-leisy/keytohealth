@@ -75,16 +75,17 @@ const CardPlaceing = styled.div`
 `;
 
 const WelcomeCard = styled.div`
-  width: 600px;
-  height: 400px;
+  width: 500px;
+  height: 300px;
   position: relative;
   /* background: rgba(255, 209, 173, 0.5); */
-  background: rgba(245, 245, 245, 0.5);
+  background: rgba(237, 230, 242, 0.7);
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  border: black 1px solid;
+  border: #003249 3px solid;
+  border-radius: 10px;
 
   @media screen and (max-width: 414px) {
     width: 100%;
@@ -103,7 +104,8 @@ const Header = styled.h2`
   width: 90%;
   font-size: 2rem;
   font-family: 'Abril Fatface', cursive;
-  color: ${({ theme }) => theme.colors.green};
+  color: ${({ theme }) => theme.colors.prussianBlue};
+  /* -webkit-text-stroke: 0.5px black; */
   margin: 0;
   display: flex;
   justify-content: center;
@@ -112,11 +114,12 @@ const Header = styled.h2`
 
 const About = styled.p`
   width: 80%;
-  font-size: 1.6rem;
+  font-size: 1.2rem;
   margin: 0;
   display: flex;
   justify-content: center;
   text-align: center;
+  font-family: 'Ubuntu', sans-serif;
 `;
 
 const ContactButton = styled.button`
@@ -125,17 +128,19 @@ const ContactButton = styled.button`
   margin-top: 20px;
   font-family: 'Abril Fatface', cursive;
   font-size: 1rem;
+  border: ${({ theme }) => theme.colors.mandarin} 5px solid;
+  border-radius: 10px;
 
-  color: #000;
-
-  background-color: ${({ theme }) => theme.colors.gold};
+  color: ${({ theme }) => theme.colors.mandarin};
 
   &:hover {
     cursor: pointer;
     /* color: ${({ theme }) => theme.colors.brown}; */
-    color: ${({ theme }) => theme.colors.green};
-    font-size: 1.1rem;
-    -webkit-text-stroke: 0.75px black;
+    color: ${({ theme }) => theme.colors.magnolia};
+    background-color: ${({ theme }) => theme.colors.mandarin};
+    transition: 0.4s ease-in-out;
+    /* font-size: 1.1rem; */
+    /* -webkit-text-stroke: 0.75px black; */
   }
 
   @media screen and (max-height: 500px) {
@@ -150,7 +155,7 @@ export default function Welcome() {
         <CardPlaceing>
           <FadeIn transitionDuration={2000}>
             <WelcomeCard>
-              <Header>UNLOCK YOUR HEALTHS FULL POTENTIAL</Header>
+              <Header>Unlock your healths full potential</Header>
               <About>
                 Offering non-invasive, natural therapies based on traditional,
                 time tested methods blended with the most recent medical

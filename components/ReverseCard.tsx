@@ -9,7 +9,7 @@ const CardWrapper = styled.div`
   display: flex;
   justify-content: center;
   /* background-color: ${({ theme }) => theme.colors.green}; */
-  background-color: #f5f5f5;
+  background-color: ${({ theme }) => theme.colors.magnolia};
   display: flex;
   align-items: center;
   justify-content: center;
@@ -56,7 +56,7 @@ const CardHeader = styled.h2`
   width: 100%;
   font-size: 5vh;
   font-weight: bold;
-  color: ${({ theme }) => theme.colors.gold};
+  color: ${({ theme }) => theme.colors.mandarin};
   -webkit-text-stroke: 0.75px black;
 
   text-align: right;
