@@ -102,9 +102,10 @@ const ImageWrapper = styled.div`
 `;
 
 const Image = styled.img`
-  max-width: 800px;
-  height: auto;
-  background-size: cover;
+  /* max-width: 800px; */
+  /* height: 100%;
+  width: auto; */
+  /* background-size: cover; */
   -moz-box-shadow: 0 0 10px #000;
   -webkit-box-shadow: 0 0 10px #000;
   box-shadow: 0 0 10px #000;

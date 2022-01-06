@@ -5,33 +5,33 @@ import styled from 'styled-components';
 
 const ContainerHeader = styled.div`
   position: fixed;
-  margin-top: ${({ top }) => (top ? '0px' : '80px')};
-  height: ${({ treatmentList, aboutList }) =>
-    treatmentList || aboutList ? '15vh' : '10vh'};
-
+  z-index: 100;
+  /* margin-top: ${({ top }) => (top ? '0px' : '80px')}; */
+  /* height: ${({ treatmentList, aboutList }) =>
+    treatmentList || aboutList ? '15vh' : '10vh'}; */
+  height: ${({ top }) => (top ? '15px' : '30px')};
   width: 100%;
-  background: ${({ top, theme }) =>
-    top ? '#fff' : 'rgba(237, 230, 242, 0.9);'};
+  /* background: ${({ top, theme }) =>
+    top ? '#fff' : 'rgba(237, 230, 242, 0.9);'}; */
+  background: rgba(237, 230, 242, 0.9);
   transition: 0.2s ease-in-out;
   border-bottom: ${({ top }) =>
-    top ? '10px solid #003249' : '5px solid #003249'};
+    top ? '5px solid #003249' : '5px solid #003249'};
   border-top: ${({ top }) =>
-    top ? '5px solid #003249' : '15px solid #003249'};
+    top ? '15px solid #003249' : '15px solid #003249'};
   padding-bottom: 0;
   margin-bottom: 0;
 
   display: flex;
   align-items: center;
   justify-content: space-between;
-  z-index: 10;
 
   @media screen and (max-width: 414px) {
     height: ${({ top }) => (top ? '20vh' : '24vh')};
   }
 
   @media screen and (max-height: 1000px) {
-    height: ${({ treatmentList, aboutList }) =>
-      treatmentList || aboutList ? '200px' : '100px'};
+    height: ${({ top }) => (top ? '100px' : '100px')};
   }
 `;
 
@@ -113,6 +113,7 @@ const Header = ({ top, toggle, site, home }) => {
         onMouseLeave={onMouseLeave}
         handleAboutMouseOver={handleAboutMouseOver}
         handleTreatmentMouseOver={handleTreatmentMouseOver}
+        top={top}
       />
     </ContainerHeader>
   );

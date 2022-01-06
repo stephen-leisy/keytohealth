@@ -13,6 +13,8 @@ const RouterWrapper = styled.div`
   font-family: 'Ubuntu', sans-serif;
   color: ${({ theme }) => theme.colors.prussianBlue};
 
+  z-index: 120;
+
   @media screen and (max-width: 1200px) {
     display: none;
   }
@@ -26,14 +28,21 @@ const NavToggle = styled.ul`
   background: transparent;
   cursor: pointer;
   color: ${({ theme }) => theme.colors.prussianBlue};
+  z-index: 1;
+
+  height: 81%;
+  margin-bottom: 10px;
   /* display: inline; */
 `;
 
 const ToggleHeader = styled.li`
   list-style: none;
   font-size: 1.2rem;
-  position: relative;
-  z-index: 10;
+  /* position: relative; */
+  z-index: 1;
+
+  height: ${({ top }) => (top ? '15px' : '30px')};
+  height: 100%;
   /* -webkit-text-stroke: 1px black; */
 
   &:hover {
@@ -48,7 +57,7 @@ const ToggleTreatmentHeader = styled.li`
   list-style: none;
   font-size: 1.2rem;
   position: relative;
-  z-index: 10;
+  z-index: 1;
 
   &:hover {
     transition: all 0.2s ease-in-out;
@@ -60,16 +69,25 @@ const ToggleTreatmentHeader = styled.li`
 const ToggleGroup = styled.ul`
   display: ${({ treatmentList, aboutList }) =>
     treatmentList || aboutList ? 'flex' : 'none'};
+
   animation: ${(props) => (props.out ? fadeOut : fadeIn)} 1s linear;
   transition: visibility 0.5s linear;
   transition: 0.9s ease-in-out;
   align-items: center;
   justify-content: center;
   flex-direction: column;
+
+  height: 100px;
+  border: solid black 2px;
+  border-top: 0px;
+  /* display: inline-block; */
+
+  /* border: solid black 2px; */
+  z-index: -1;
   /* border: solid black 3px; */
   padding: 0px;
   font-size: 1.3rem;
-  /* background-color: ${({ theme }) => theme.colors.lcream}; */
+  background-color: ${({ theme }) => theme.colors.magnolia};
 `;
 
 const ToggleLink = styled.li`
@@ -77,13 +95,14 @@ const ToggleLink = styled.li`
   align-items: center;
   justify-content: center;
   list-style: none;
+  padding: 2px;
 `;
 
 const ContactHeader = styled.li`
   list-style: none;
   font-size: 1.5rem;
   position: relative;
-  z-index: 10;
+  z-index: -1;
 `;
 
 const ALink = styled(Link)`
@@ -171,6 +190,7 @@ export default function Nav({
   onMouseLeave,
   handleAboutMouseOver,
   handleTreatmentMouseOver,
+  top,
 }) {
   let page = site.split('/')[3];
 
@@ -184,7 +204,7 @@ export default function Nav({
             </HiddenLink>
           </ToggleHeader>
         </NavToggle>
-        <NavToggle>
+        <NavToggle top={top}>
           <ToggleHeader
             onClick={toggleTreatments}
             onMouseOver={handleTreatmentMouseOver}
@@ -196,6 +216,7 @@ export default function Nav({
             treatmentList={treatmentList}
             onMouseOver={handleTreatmentMouseOver}
             onMouseLeave={onMouseLeave}
+            top={top}
           >
             <ToggleLink onMouseLeave={onMouseLeave}>
               <BLink to="article1" onClick={toggleTreatments}>

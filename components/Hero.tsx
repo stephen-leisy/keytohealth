@@ -59,7 +59,7 @@ const BackImage = styled.div`
 const CardPlaceing = styled.div`
   width: 80%;
   height: 100%;
-  padding-top: 15vh;
+  /* padding-top: 15vh; */
   display: flex;
   justify-content: center;
   align-items: center;
